@@ -1,0 +1,217 @@
+<!-- <section class="content-header" *ngIf="!isLoading">
+    <h3>
+        {{'GRN_CANCEL.BREAD_CRUMB_TITLE'| translate }}
+        <small>{{'COMMON.BREAD_CRUMB_SUB_TITLE'| translate }}</small>
+    </h3>
+    <p-breadcrumb [model]="items" [home]="home" [style]="{ background: 'none', border: 'none' }"></p-breadcrumb>
+</section> -->
+
+<!-- <section class="container-fluid page-scroller" [hidden]="isLoading">
+    <form [formGroup]="dataForm">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="content-card-custom">
+
+                    <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                        <div class="column">
+                            <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                                {{'GRN_CANCEL.TITLE'|
+                                translate }}</p>
+                            <p class="toolbar__para para-style" [ngStyle]="{'color': theme.toolBarSubHeaderColor}">
+                                {{'GRN_CANCEL.SUB_TITLE'| translate}}</p>
+                        </div>
+
+                        <span class="toolbar-spacer"></span>
+
+                        <div class="tool-bar-btn-group">
+                       
+                            <button class="toolbar__icon right_corner"
+                                matTooltip="{{'COMMON.CLEAR_TOOLTIP'| translate}}" (click)="clearData()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">add</mat-icon>
+                            </button>
+                        </div>
+
+                    </mat-toolbar>
+
+                    <div class="txt-wrapper">
+
+                        <div class="row">
+                           
+                            <div class="col-md-4">
+                                <label class="label-config">{{'GRN_CANCEL.FORM_TITLE_1'| translate }}</label>
+                                <p-dropdown [options]="allGrn" optionLabel="label" optionValue="id" [filter]="true"
+                                    [style]="{'width':'100%','height':'45px','margin-bottom': '10px'}"
+                                    [(ngModel)]="grnId" (ngModelChange)="grnChanged()"
+                                    formControlName="grnId">
+                                </p-dropdown>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="content-card">
+                    <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                        <div class="column">
+                            <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                                {{'GRN_CANCEL.TABLE_TITLE'| translate}}</p>
+                        </div>
+                        <span class="toolbar-spacer"></span>
+
+                        <span class="p-input-icon-right">
+                            <i class="pi pi-search"></i>
+                            <input type="text" class="input-style input-config-1 table-search-box"
+                                placeholder="{{'COMMON.SEARCH_TITLE'| translate }}" pInputText
+                                (keyup)="tableFilter($event)">
+                        </span>
+
+                        <div class="tool-bar-btn-group">
+                            <button class="toolbar__icon right_corner" matTooltip="{{'COMMON.SAVE_TOOLTIP'| translate}}"                  
+                                (click)="saveConfirmation()" [disabled]="!dataForm.valid"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">save</mat-icon>
+                            </button>
+
+                        </div>
+
+
+
+                    </mat-toolbar>
+
+                    <div class="table-wrapper">
+                        <div class="table">
+                            <mat-table #table [dataSource]="dataSource">
+
+                                <ng-container matColumnDef="productName">
+                                    <mat-header-cell *matHeaderCellDef>{{'GRN_CANCEL.TABLE_HEADER_1'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.productName}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="currentQty">
+                                    <mat-header-cell *matHeaderCellDef>{{'GRN_CANCEL.TABLE_HEADER_2'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.currentQty}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="returnQty">
+                                    <mat-header-cell *matHeaderCellDef>{{'GRN_CANCEL.TABLE_HEADER_3'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+
+                                        <input type="text" class="input-style input-config-1" pInputText
+                                            [ngModelOptions]="{standalone: true}" [(ngModel)]="element.returnQty"
+                                            (ngModelChange)="qtyChange(element)">
+
+                                    </mat-cell>
+                                </ng-container>
+
+                                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                            </mat-table>
+
+                            <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5,10, 15, 20]"
+                                showFirstLastButtons>
+                            </mat-paginator>
+                            <br>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+
+</section> -->
+
+<app-loader *ngIf="isLoading"></app-loader>
+<h2 class="header">Grn Cancel</h2>
+<p class="breadcrumbs">sales / grn-cancel</p>
+<p-toast></p-toast>
+<div class="insert-form-card" *ngIf="!isLoading">
+    <!-- FORM HEADER -->
+    <div class="card-header">
+        <h2 class="header">Grn Cancel</h2>
+        <div class="icon-wapper">
+            <button class="icon-button" pTooltip="Clear" tooltipPosition="bottom" (click)="clearData()">
+                <i class="fal fa-eraser"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- FORM BODY -->
+    <form class="card-body" [formGroup]="dataForm">
+        <div class="input-wapper">
+            <div class="wapper">
+                <label for="branch">Grn Number</label>
+                <p-dropdown [options]="allGrn" optionLabel="label" optionValue="id" [filter]="true"
+                    [style]="{'width':'100%','margin-bottom': '10px'}"
+                    (onChange)="grnChanged()" [(ngModel)]="grnId" formControlName="grnId">
+                </p-dropdown>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="view-table-card" *ngIf="!isLoading">
+    <p-table 
+        #dt1 
+        [value]="allData"
+        [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['productName', 'currentQty']">
+        <!-- TABLE FILTERS -->
+        <ng-template pTemplate="caption">
+            <div class="flex" class="card-filter">
+                <div class="button-wapper">
+                    <button class="icon-button" tooltipPosition="bottom" (click)="saveConfirmation()" [disabled]="!dataForm.valid">
+                        <i class="fal fa-circle-minus"></i>
+                        <h4>Cancel Selected Quantities</h4>
+                    </button>
+                    <button class="icon-button" tooltipPosition="bottom" (click)="fullCancelConfirmation()" [disabled]="!dataForm.valid">
+                        <i class="fal fa-trash"></i>
+                        <h4>Cancel Whole Grn</h4>
+                    </button>
+                </div>
+                <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="applyFilterGlobal($event, 'contains')" placeholder="Filter Data" class="filter"/>
+                </span>
+            </div>
+        </ng-template>
+        <!-- TABLE HEADER -->
+        <ng-template pTemplate="header">
+            <tr class="card-header">
+                <th class="left-th">Product Name</th>
+                <th>Grn Quantity</th>
+                <th>Available Quantity</th>
+                <th class="right-th">Return Quantity</th>
+            </tr>
+        </ng-template>
+        <!-- TABLE BODY -->
+        <ng-template pTemplate="body" let-data>
+            <tr class="card-body table-border">
+                <td>{{data.productName}}</td>
+                <td>{{data.basedQty}}</td>
+                <td>{{data.currentQty}}</td>
+                <td>
+                    <input class="input-text" type="text" pInputText [ngModelOptions]="{standalone: true}" 
+                    [(ngModel)]="data.returnQty" (ngModelChange)="qtyChange(data)" placeholder="5"/>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

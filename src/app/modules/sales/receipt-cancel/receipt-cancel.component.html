@@ -1,0 +1,123 @@
+<!-- <section class="content-header" *ngIf="!isLoading">
+    <h3>
+        {{'RECEIPT.BREAD_CRUMB_TITLE'| translate }}
+        <small>{{'COMMON.BREAD_CRUMB_SUB_TITLE'| translate }}</small>
+    </h3>
+    <p-breadcrumb [model]="items" [home]="home" [style]="{ background: 'none', border: 'none' }"></p-breadcrumb>
+</section> -->
+
+<!-- <section class="container-fluid page-scroller" [hidden]="isLoading">
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="content-card-custom">
+
+                <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                    <div class="column">
+                        <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                            {{'RECEIPT.TITLE'|
+                            translate }}</p>
+                        <p class="toolbar__para para-style" [ngStyle]="{'color': theme.toolBarSubHeaderColor}">
+                            {{'RECEIPT.SUB_TITLE'| translate}}</p>
+                    </div>
+
+                    <span class="toolbar-spacer"></span>
+
+                    <div class="tool-bar-btn-group">
+
+                        <button class="toolbar__icon" matTooltip="{{'COMMON.CLEAR_TOOLTIP'| translate}}"
+                        (click)="print()" [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                        <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">print</mat-icon>
+                      </button>
+
+
+                        <button class="toolbar__icon" matTooltip="{{'COMMON.CLEAR_TOOLTIP'| translate}}"
+                        (click)="saveConfirmation()" [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                        <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">remove</mat-icon>
+                      </button>
+
+                        <button class="toolbar__icon right_corner" matTooltip="{{'COMMON.CLEAR_TOOLTIP'| translate}}"
+                            (click)="clearData()" [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                            <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">add</mat-icon>
+                        </button>
+                    </div>
+
+                </mat-toolbar>
+
+                <div class="txt-wrapper">
+                    <form [formGroup]="dataForm">
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <label class="label-config">{{'RECEIPT.FORM_TITLE_1'| translate }}</label>
+                                <p-dropdown [options]="allCustomers" optionLabel="name" optionValue="id" [filter]="true"
+                                    [style]="{'width':'100%','height':'45px','margin-bottom': '10px'}"
+                                    formControlName="customerId" [(ngModel)]="cusId"
+                                    (ngModelChange)="customerChange($event)">
+                                </p-dropdown>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <label class="label-config">{{'RECEIPT.FORM_TITLE_1'| translate }}</label>
+                                <p-dropdown [options]="receiptList" optionLabel="genId" [filter]="true"
+                                    [style]="{'width':'100%','height':'45px','margin-bottom': '10px'}"
+                                    formControlName="receiptId" [(ngModel)]="receiptId">
+                                </p-dropdown>
+                            </div>
+
+                        
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section> -->
+
+<app-loader *ngIf="isLoading"></app-loader>
+<h2 class="header">Receipt Cancel</h2>
+<p class="breadcrumbs">sales / receipt-cancel</p>
+<p-toast></p-toast>
+<div class="insert-form-card" *ngIf="!isLoading">
+    <!-- FORM HEADER -->
+    <div class="card-header">
+        <h2 class="header">Receipt Cancel</h2>
+        <div class="icon-wapper">
+            <button class="icon-button" pTooltip="Print" tooltipPosition="bottom" (click)="print()">
+                <i class="fal fa-print"></i>
+            </button>
+            <button class="icon-button" pTooltip="Cancel" tooltipPosition="bottom" (click)="saveConfirmation()">
+                <i class="fal fa-file-contract"></i>
+            </button>
+            <button class="icon-button" pTooltip="Clear" tooltipPosition="bottom" (click)="clearData()">
+                <i class="fal fa-eraser"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- FORM BODY -->
+    <form class="card-body" [formGroup]="dataForm">
+        <div class="input-wapper">
+            <div class="wapper">
+                <label for="start-date">Customer</label>
+                <p-dropdown [options]="allCustomers" optionLabel="name" optionValue="id" [filter]="true"
+                    [style]="{'width':'100%'}" formControlName="customerId" 
+                    (ngModelChange)="customerChange($event)">
+                </p-dropdown>
+            </div>
+
+            <div class="wapper">
+                <label for="end-date">Receipt</label>
+                <p-dropdown [options]="receiptList" optionLabel="genId" [filter]="true"
+                    [style]="{'width':'100%'}" formControlName="receiptId">
+                </p-dropdown>
+            </div>
+        </div>
+    </form>
+</div>

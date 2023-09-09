@@ -1,0 +1,108 @@
+<!-- <section class="content-header" *ngIf="!isLoading">
+    <h3>
+        {{'CURRENT_STOCK.BREAD_CRUMB_TITLE'| translate }}
+        <small>{{'COMMON.BREAD_CRUMB_SUB_TITLE'| translate }}</small>
+    </h3>
+    <p-breadcrumb [model]="items" [home]="home" [style]="{ background: 'none', border: 'none' }"></p-breadcrumb>
+</section> -->
+
+<!-- <section class="container-fluid page-scroller" *ngIf="!isLoading">
+        <div class="row">
+
+          
+            <div class="col-md-12">
+                <div class="content-card">
+                    <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                        <div class="column">
+                            <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                                {{'CURRENT_STOCK.TABLE_TITLE'| translate}} <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}" (click)="getData()" class="reloader">sync</mat-icon> </p>
+                        </div>
+                        <span class="toolbar-spacer"></span>
+
+                        <span class="p-input-icon-right">
+                            <i class="pi pi-search"></i>
+                            <input type="text" class="input-style input-config-1 table-search-box"
+                                placeholder="{{'COMMON.SEARCH_TITLE'| translate }}" pInputText
+                                (keyup)="tableFilter($event)">
+                        </span>
+
+                    </mat-toolbar>
+
+                    <div class="table-wrapper">
+                        <div class="table">
+                            <mat-table #table [dataSource]="dataSource">
+
+                                <ng-container matColumnDef="product">
+                                    <mat-header-cell *matHeaderCellDef>{{'CURRENT_STOCK.TABLE_HEADER_1'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="table-text">{{element.productName}}</span>
+                                    </mat-cell>
+                                </ng-container>
+                          
+                                <ng-container matColumnDef="currentQty">
+                                    <mat-header-cell *matHeaderCellDef>{{'CURRENT_STOCK.TABLE_HEADER_3'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="table-text">{{element.currentQty}}</span>
+                                    </mat-cell>
+                                </ng-container>
+
+                                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                            </mat-table>
+
+                            <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5,10, 15, 20]"
+                                showFirstLastButtons>
+                            </mat-paginator>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+
+
+</section> -->
+
+<app-loader *ngIf="isLoading"></app-loader>
+<h2 class="header">Current Stock</h2>
+<p class="breadcrumbs">reports / current-stock</p>
+<p-toast></p-toast>
+
+<div class="view-table-card" *ngIf="!isLoading">
+    <p-table #dt1 [value]="allData" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['productName', 'currentQty']">
+        <!-- TABLE FILTERS -->
+        <ng-template pTemplate="caption">
+            <div class="flex" class="card-filter">
+                <button class="reload-button" pTooltip="Reload" tooltipPosition="bottom" (click)="getData()">
+                    <i class="fal fa-rotate"></i>
+                    <span>Reload</span>
+                </button>
+                <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="applyFilterGlobal($event, 'contains')"
+                        placeholder="Filter Data" class="filter" />
+                </span>
+            </div>
+        </ng-template>
+        <!-- TABLE HEADER -->
+        <ng-template pTemplate="header">
+            <tr class="card-header">
+                <th class="left-th">Name</th>
+                <th class="right-th">Current Quantity</th>
+            </tr>
+        </ng-template>
+        <!-- TABLE BODY -->
+        <ng-template pTemplate="body" let-data>
+            <tr class="card-body table-border">
+                <td>{{data.productName}}</td>
+                <td>{{data.currentQty}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

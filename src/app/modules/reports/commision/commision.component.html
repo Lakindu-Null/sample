@@ -1,0 +1,160 @@
+<section class="content-header" *ngIf="!isLoading">
+    <h3>
+        {{'COMMISION_REPORT.BREAD_CRUMB_TITLE'| translate }}
+        <small>{{'COMMON.BREAD_CRUMB_SUB_TITLE'| translate }}</small>
+    </h3>
+    <p-breadcrumb [model]="items" [home]="home" [style]="{ background: 'none', border: 'none' }"></p-breadcrumb>
+</section>
+
+<section class="container-fluid page-scroller" *ngIf="!isLoading">
+    <form [formGroup]="dataForm">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="content-card-custom">
+
+                    <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                        <div class="column">
+                            <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                                {{'COMMISION_REPORT.TITLE'| translate }}</p>
+                            <p class="toolbar__para para-style" [ngStyle]="{'color': theme.toolBarSubHeaderColor}">
+                                {{'COMMISION_REPORT.SUB_TITLE'| translate}}</p>
+                        </div>
+
+                        <span class="toolbar-spacer"></span>
+
+                        <div class="tool-bar-btn-group">
+
+                            <button class="toolbar__icon"
+                                [disabled]="!dataForm.valid"
+                                matTooltip="{{'COMMON.SAVE_TOOLTIP'| translate}}" (click)="getData()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">sync</mat-icon>
+                            </button>
+
+
+                            <button class="toolbar__icon right_corner"
+                                matTooltip="{{'COMMON.CLEAR_TOOLTIP'| translate}}" (click)="clearData()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">add</mat-icon>
+                            </button>
+                        </div>
+
+                    </mat-toolbar>
+
+                    <div class="txt-wrapper">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <label class="label-config">{{'COMMISION_REPORT.FORM_TITLE_1'| translate }}</label>
+                                <input type="date" class="input-style input-config-1" placeholder="Start Date" [(ngModel)]="startDate"
+                                    pInputText formControlName="startDate">
+                                    
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="label-config">{{'COMMISION_REPORT.FORM_TITLE_2'| translate }}</label>
+                                <input type="date" class="input-style input-config-1" placeholder="End Date" pInputText [(ngModel)]="endDate"
+                                    formControlName="endDate">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="content-card">
+                    <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                        <div class="column">
+                            <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                                {{'COMMISION_REPORT.TABLE_TITLE'| translate}}</p>
+                        </div>
+                        <span class="toolbar-spacer"></span>
+
+                        <span class="p-input-icon-right">
+                            <i class="pi pi-search"></i>
+                            <input type="text" class="input-style input-config-1 table-search-box"
+                                placeholder="{{'COMMON.SEARCH_TITLE'| translate }}" pInputText
+                                (keyup)="tableFilter($event)">
+                        </span>
+                    </mat-toolbar>
+
+                    <div class="table-wrapper">
+                        <div class="table">
+                            <mat-table #table [dataSource]="dataSource">
+
+                                <ng-container matColumnDef="branchName">
+                                    <mat-header-cell *matHeaderCellDef>{{'COMMISION_REPORT.TABLE_HEADER_1'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="table-text">{{element.branchName}}</span>
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="sale">
+                                    <mat-header-cell *matHeaderCellDef>{{'COMMISION_REPORT.TABLE_HEADER_2'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="table-text">{{element.sale.toFixed(2)}}</span>
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="returns">
+                                    <mat-header-cell *matHeaderCellDef>{{'COMMISION_REPORT.TABLE_HEADER_3'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="table-text">{{element.returns.toFixed(2)}}</span>
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="comPre">
+                                    <mat-header-cell *matHeaderCellDef>{{'COMMISION_REPORT.TABLE_HEADER_4'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="table-text highlight-text1">{{element.comPre}}%</span>
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="commision">
+                                    <mat-header-cell *matHeaderCellDef>{{'COMMISION_REPORT.TABLE_HEADER_5'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <span class="table-text highlight-text1">{{element.commision.toFixed(2)}}</span>
+                                    </mat-cell>
+                                </ng-container>
+
+                              
+                                <ng-container matColumnDef="view">
+                                    <mat-header-cell *matHeaderCellDef>{{'COMMISION_REPORT.TABLE_HEADER_6'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <!-- <button mat-icon-button color="primary" (click)="getPrint(element)">
+                                            <mat-icon>apps</mat-icon>
+                                        </button> -->
+                                        Not Available
+                                    </mat-cell>
+                                </ng-container>
+
+
+                                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                            </mat-table>
+
+                            <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5,10, 15, 20]"
+                                showFirstLastButtons>
+                            </mat-paginator>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</section>
+
+<app-loader *ngIf="isLoading"></app-loader>

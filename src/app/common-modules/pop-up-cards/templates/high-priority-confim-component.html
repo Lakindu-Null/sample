@@ -1,0 +1,17 @@
+<div class="dialog-wapper">
+    <h2 class="header">Confirmation</h2>
+    <h4 class="message">{{message}}</h4>
+    <h4 class="warning">This action cannot be undone</h4>
+    <h4 class="confirm">Enter 'confirm' to proceed.</h4>
+
+    <input class="confirm-input" type="text" pInputText [(ngModel)]="confirm" style="width: 100%;" placeholder="Confirm"/>
+
+    <div class="button-wapper">
+        <button (click)="dialogClose(false)" class="cancel-btn">
+            <h4>Cancel</h4>
+        </button>
+        <button (click)="dialogClose(true)" class="delete-btn">
+            <h4>Delete</h4>
+        </button>
+    </div>
+</div>

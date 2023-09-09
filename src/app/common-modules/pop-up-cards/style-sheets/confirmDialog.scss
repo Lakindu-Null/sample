@@ -1,0 +1,70 @@
+// h2 {
+//     margin-left: 8px;
+// }
+
+// p {
+//     margin-left: 8px;
+// }
+
+// button {
+//     margin-left: 8px;
+// }
+
+@import "../../../../colors.scss";
+
+
+.dialog-wapper{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+
+    .header{
+        font-size: 24px;
+        margin-bottom: 14px !important;
+        font-weight: 800 !important;
+    }
+    
+    .message{
+        font-size: 14px;
+        color: $paragraph-color;
+        margin-bottom: 12px;
+        max-width: 285px;
+        line-height: 1.4;
+    }
+}
+
+.button-wapper{
+    display: flex;
+    gap: 12px;
+
+    button{
+        width: 136px;
+        height: 42px;
+        border-radius: 8px;
+        border: none;
+        opacity: 0.9;
+
+        h4{
+            font-size: 14px;
+            font-weight: 600 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    button:hover{
+        opacity: 1;
+    }
+
+    .cancel-btn{
+        background-color: $button-close-background;
+        h4{
+            color: $black;
+        }
+    }
+    .confirm-btn{
+        background-color: $green-theme-colors-light;
+        h4{
+            color: $white;
+        }
+    }
+}

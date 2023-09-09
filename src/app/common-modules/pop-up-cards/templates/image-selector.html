@@ -1,0 +1,89 @@
+
+
+
+<mat-toolbar>
+      <span class="tootbar-text">{{headerText}}</span>
+      <span class="jspacer"></span>
+
+      <mat-icon (click)="closeModal()" class="close-dialog-box-btn">close</mat-icon>
+
+</mat-toolbar>
+
+<mat-tab-group animationDuration="0ms">
+      <mat-tab [disabled]="images.length==0">
+            <ng-template mat-tab-label>
+                  {{tabText1}}&nbsp;
+                  <mat-icon>image</mat-icon>
+            </ng-template>
+            <div class="tab-content">
+                  <mat-grid-list cols="6" rowHeight="200px" *ngIf="!deleteLoder">
+                        <mat-grid-tile *ngFor="let img of images" class="grid-tile">
+                              <div class="grid-box">
+                                    <img src="{{img.imageUrl}}" class="img-thumbnail"
+                                          (click)="selectImage(img)" alt=" ">
+                                    <mat-checkbox class="image-check" [(ngModel)]="img.selected"
+                                          [disabled]="true"></mat-checkbox>
+                              </div>
+                        </mat-grid-tile>
+                  </mat-grid-list>
+
+                  <div class="row" *ngIf="deleteLoder">
+                        <span [ngClass]="{'file-uploader-loader': deleteLoder }"></span>
+                        <p align="center" class="file-uploader-loading-text">Removing ..</p>
+                  </div>
+            </div>
+      </mat-tab>
+
+      <mat-tab>
+            <ng-template mat-tab-label>
+                  {{tabText2}}&nbsp;
+                  <mat-icon>cloud_upload</mat-icon>
+            </ng-template>
+            <div class="tab-content">
+
+                  <div *ngIf="!uploadLoder" class="uploader-content">
+                        <div class="row" *ngIf="imageSrc!=null">
+                              <p align="center"><img src="{{imageSrc}}" class="selected-image" alt="">
+                              </p>
+                        </div>
+                        <div class="row">
+                              <p align="center">
+                                    <label for="formFile" class="form-label" *ngIf="images.length!=0">
+                                          {{selectedImage}}
+                                         </label>
+                                    <label for="formFile" class="form-label" *ngIf="images.length==0">
+                                          {{notice1}}</label>
+                                    <input class="form-control" type="file" id="formFile" (change)="chooseFile($event)"
+                                          #fileInput>
+                              </p>
+                        </div>
+                        <div class="row">
+                              <p align="center">
+                                    <button mat-raised-button class="upload-ubtn" (click)="uploadImage()"
+                                          [disabled]="selectedFile==null">{{btnUpload}} <mat-icon>upload</mat-icon> </button>
+                              </p>
+                        </div>
+                  </div>
+                  <div class="row" *ngIf="uploadLoder">
+                        <span [ngClass]="{'file-uploader-loader': uploadLoder }"></span>
+                        <p align="center" class="file-uploader-loading-text">{{proccesingText1}} ..</p>
+                  </div>
+            </div>
+      </mat-tab>
+
+</mat-tab-group>
+
+<mat-toolbar>
+      <span class="jspacer"></span>
+      <div class="button-row">
+
+            <button mat-button (click)="confirmSelected()" color="primary" class="confirm-btn"
+                  [disabled]="isImagesSelected()">
+                  <span><mat-icon>check</mat-icon>{{btnConf}}</span>
+                 
+            </button>
+            <button mat-button (click)="removeImages()" class="remove-btn" [disabled]="oneElementSelected()">
+                  <span><mat-icon>delete</mat-icon>{{btnRemove}}</span>
+            </button>
+      </div>
+</mat-toolbar>

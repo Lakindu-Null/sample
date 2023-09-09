@@ -1,0 +1,293 @@
+<!-- <section class="content-header" *ngIf="!isLoading">
+    <h3>
+        {{'USERS.BREAD_CRUMB_TITLE'| translate }}
+        <small>{{'COMMON.BREAD_CRUMB_SUB_TITLE'| translate }}</small>
+    </h3>
+    <p-breadcrumb [model]="items" [home]="home" [style]="{ background: 'none', border: 'none' }"></p-breadcrumb>
+</section> -->
+
+<!-- <section class="container-fluid page-scroller" *ngIf="!isLoading">
+    <form [formGroup]="dataForm">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="content-card">
+
+                    <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                        <div class="column">
+                            <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">{{'USERS.TITLE'|
+                                translate }}</p>
+                            <p class="toolbar__para para-style" [ngStyle]="{'color': theme.toolBarSubHeaderColor}">
+                                {{'USERS.SUB_TITLE'| translate}}</p>
+                        </div>
+
+                        <span class="toolbar-spacer"></span>
+
+                        <div class="tool-bar-btn-group">
+
+                            <button *ngIf="grantAccess(1)" class="toolbar__icon"
+                                [disabled]="!dataForm.valid||selection.selected.length!=0"
+                                matTooltip="{{'COMMON.SAVE_TOOLTIP'| translate}}" (click)="saveConfirmation()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">save</mat-icon>
+                            </button>
+
+
+                            <button *ngIf="grantAccess(1)" class="toolbar__icon"
+                                [disabled]="!dataForm.valid||selection.selected.length==0"
+                                matTooltip="{{'COMMON.UPDATE_TOOLTIP'| translate}}" (click)="updateConfirmation()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">edit</mat-icon>
+                            </button>
+
+                            <button *ngIf="grantAccess(1)" class="toolbar__icon"
+                                [disabled]="!dataForm.valid||selection.selected.length==0"
+                                matTooltip="{{'COMMON.DELETE_TOOLTIP'| translate}}" (click)="deleteConfirmation()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">remove</mat-icon>
+                            </button>
+
+                            <button *ngIf="grantAccess(1)" class="toolbar__icon"
+                                [disabled]="allData.length==0" matTooltip="{{'COMMON.PRINT_TOOLTIP'| translate}}"
+                                (click)="print()" [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">print</mat-icon>
+                            </button>
+
+                            <button *ngIf="grantAccess(1)" class="toolbar__icon"
+                                [disabled]="selection.selected.length==0"
+                                matTooltip="{{'USERS.PASSWORD_RESET_TOOLTIP'| translate}}" (click)="passwordReset()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">sync_lock</mat-icon>
+                            </button>
+
+
+                            <button class="toolbar__icon right_corner"
+                                matTooltip="{{'COMMON.CLEAR_TOOLTIP'| translate}}" (click)="clearData()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">add</mat-icon>
+                            </button>
+                        </div>
+
+                    </mat-toolbar>
+
+                    <div class="txt-wrapper">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <label class="label-config">{{'USERS.FORM_TITLE_1'| translate }}</label>
+                                <input type="text" class="input-style input-config-1" placeholder="Username" pInputText
+                                    formControlName="userName">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="label-config">{{'USERS.FORM_TITLE_2'| translate }}</label>
+                                <input type="text" class="input-style input-config-1" placeholder="Email Address"
+                                    pInputText formControlName="emailAddress">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="label-config">{{'USERS.FORM_TITLE_3'|translate}}</label>
+                                <p-dropdown [(ngModel)]="selectedOption" [options]="activeOptions" optionLabel="name"
+                                    optionValue="id" [style]="{'width':'100%','height':'45px','margin-bottom': '10px'}"
+                                    formControlName="status">
+                                </p-dropdown>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="content-card">
+                    <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                        <div class="column">
+                            <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                                {{'USERS.TABLE_TITLE'| translate}}</p>
+                        </div>
+                        <span class="toolbar-spacer"></span>
+
+                        <span class="p-input-icon-right">
+                            <i class="pi pi-search"></i>
+                            <input type="text" class="input-style input-config-1 table-search-box"
+                                placeholder="{{'COMMON.SEARCH_TITLE'| translate }}" pInputText
+                                (keyup)="tableFilter($event)">
+                        </span>
+                    </mat-toolbar>
+
+                    <div class="table-wrapper">
+                        <div class="table">
+                            <mat-table #table [dataSource]="dataSource">
+                                <ng-container matColumnDef="select">
+                                    <mat-header-cell *matHeaderCellDef>{{'USERS.TABLE_HEADER_1'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <mat-checkbox (click)="$event.stopPropagation()" [disabled]="element.id==1"
+                                            (change)="$event ? selection.toggle(element) : null"
+                                            [checked]="selection.isSelected(element)" (change)="tableSelect(element)">
+                                        </mat-checkbox>
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="name">
+                                    <mat-header-cell *matHeaderCellDef>{{'USERS.TABLE_HEADER_2'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.userName}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="branchName">
+                                    <mat-header-cell *matHeaderCellDef>{{'USERS.TABLE_HEADER_3'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.branchName}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="createdDate">
+                                    <mat-header-cell *matHeaderCellDef>{{'USERS.TABLE_HEADER_4'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.createdDate}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="createdBy">
+                                    <mat-header-cell *matHeaderCellDef>{{'USERS.TABLE_HEADER_5'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.createdBy}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                            </mat-table>
+
+                            <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5,10, 15, 20]"
+                                showFirstLastButtons>
+                            </mat-paginator>
+                            <br>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+
+</section> -->
+
+<app-loader *ngIf="isLoading"></app-loader>
+<h2 class="header">Manage Users</h2>
+<p class="breadcrumbs">setup / users</p>
+<p-toast></p-toast>
+<div class="insert-form-card" *ngIf="!isLoading">
+    <!-- FORM HEADER -->
+    <div class="card-header">
+        <h2 class="header">Users</h2>
+        <div class="icon-wapper">
+            <button class="icon-button" pTooltip="Save" tooltipPosition="bottom" (click)="saveConfirmation()"
+                [disabled]="!dataForm.valid || selectedData != undefined">
+                <i class="fal fa-file-contract"></i>
+            </button>
+            <button class="icon-button" pTooltip="Update" tooltipPosition="bottom" (click)="updateConfirmation()"
+                [disabled]="!dataForm.valid || selectedData == undefined">
+                <i class="fal fa-pen"></i>
+            </button>
+            <button class="icon-button" pTooltip="Delete" tooltipPosition="bottom" (click)="deleteConfirmation()"
+                [disabled]="selectedData == undefined">
+                 <i class="fal fa-trash-can"></i>
+            </button>
+            <button class="icon-button" pTooltip="Password Reset" tooltipPosition="bottom" (click)="passwordReset()"
+                [disabled]="selectedData == undefined">
+                <i class="fal fa-key"></i>
+            </button>
+            <button class="icon-button" pTooltip="Clear" tooltipPosition="bottom" (click)="clearData()">
+                <i class="fal fa-eraser"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- FORM BODY -->
+    <form class="card-body" [formGroup]="dataForm">
+        <div class="input-wapper">
+            <div class="wapper">
+                <label for="branch">User Name</label>
+                <input class="input-text" type="text" pInputText formControlName="userName" placeholder="Dineth"/>
+                <div class="error-text" *ngIf="dataForm.get('userName').touched || dataForm.get('userName').dirty">
+                    <div  class="d-flex mb-2" *ngIf="dataForm.get('userName').errors?.['required']">User Name is Required</div>
+                    <div  class="d-flex mb-2" *ngIf="dataForm.get('userName').errors?.['minlength']">User Name Must be at Least 3 Characters</div>
+                    <div  class="d-flex mb-2" *ngIf="dataForm.get('userName').errors?.['maxlength']">User Name Can't be more than 10 Characters</div>
+                </div>
+            </div>
+
+            <div class="wapper">
+                <label for="branch">Email Address</label>
+                <input class="input-text" type="text" pInputText formControlName="emailAddress" placeholder="dineth@gmail.com"/>
+                <div class="error-text" *ngIf="dataForm.get('emailAddress').touched || dataForm.get('emailAddress').dirty">
+                    <div  class="d-flex mb-2" *ngIf="dataForm.get('emailAddress').errors?.['required']">Email Address is Required</div>
+                    <div  class="d-flex mb-2" *ngIf="dataForm.get('emailAddress').errors?.['pattern']">Not a Valid Email Address</div>
+                </div>
+            </div>
+
+            <div class="wapper">
+                <label for="branch">Active</label>
+                <p-dropdown [(ngModel)]="selectedOption" [options]="activeOptions" optionLabel="name"
+                optionValue="id" [style]="{'width':'100%','height':'45px','margin-bottom': '10px'}"
+                formControlName="status">
+            </p-dropdown>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="view-table-card" *ngIf="!isLoading">
+    <p-table 
+        #dt1 
+        [value]="allData" [(selection)]="selectedData" dataKey="id" selectionMode="single"
+        (onRowSelect)="onRowSelect($event)" (onRowUnselect)="onRowUnselect($event)"
+        [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['name', 'email', 'createdDate', 'createdBy']">
+        <!-- TABLE FILTERS -->
+        <ng-template pTemplate="caption">
+            <div class="flex" class="card-filter">
+                <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="applyFilterGlobal($event, 'contains')" placeholder="Filter Data" class="filter"/>
+                </span>
+            </div>
+        </ng-template>
+        <!-- TABLE HEADER -->
+        <ng-template pTemplate="header">
+            <tr class="card-header">
+                <th class="left-th">Select</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Created Date</th>
+                <th class="right-th">Created By</th>
+            </tr>
+        </ng-template>
+        <!-- TABLE BODY -->
+        <ng-template pTemplate="body" let-data>
+            <tr [pSelectableRow]="data" class="card-body">
+                <td>
+                    <p-tableCheckbox [value]="data"></p-tableCheckbox>
+                </td>
+                <td>{{data.userName}}</td>
+                <td>{{data.emailAddress}}</td>
+                <td>{{data.createdDate}}</td>
+                <td>{{data.createdBy}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

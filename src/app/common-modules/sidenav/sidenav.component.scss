@@ -1,0 +1,444 @@
+@import "./../../../colors.scss";
+
+/* COMMON STYLES */
+ol, ul {
+    padding-left: 0rem;
+}
+
+.logo {
+    border-radius: 0.313rem;
+    cursor: pointer;
+    border: none;
+    background-color: $white;
+    img {
+        height: 24px;
+    }
+}
+
+.toggle-btn {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    background-color: $white;
+}
+
+/* BRAND CONTAINER */
+.sidenav {
+    background: $white;
+    transition: all 0.5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 6rem;
+    height: 100vh;
+    border-right: 1px solid $border-color;
+
+    .brand-container {
+        display: flex;
+        align-items: center;
+        padding: 14px 14px 0 14px;
+        width: 100%;
+        margin-bottom: 4px;
+
+        .logo {
+            img {
+                margin-top: 6px;
+                height: 24px;
+                position: relative;
+            }
+        }
+
+        .toggle-btn {
+            position: absolute;
+            left: 5rem;
+
+            .fa-times {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.sidenav-collapsed {
+    width: 18rem;
+
+    .logo {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        img {
+            height: 48px !important;
+        }
+    }
+
+    .toggle-btn {
+        position: relative !important;
+        left: 32px !important;
+    }
+
+    .sidenav-nav-link {
+        width: 100% !important;
+        justify-content: start !important;
+    }
+}
+
+/* NAV TOPIC */
+.sales-module,
+.sales-module-collapsed {
+    display: flex;
+    width: 100%;
+    color: $text-color-1 !important;
+
+    &.sales-module {
+        font-weight: 500;
+        margin-bottom: 18px;
+    }
+
+    &.sales-module-collapsed {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.hr-style {
+    background-color: $hr-color;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 18px;
+    border: none;
+    opacity: 1;
+}
+.hr-config{
+    margin: 0 16px;
+    margin-top: 19px !important;
+    width: initial;
+}
+
+/* SUB NAV CONTAINER */
+.sidenav-nav {
+    list-style: none;
+    padding: 0.938rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .sidenav-nav-item {
+        width: 100%;
+        margin-bottom: 0.625rem;
+        cursor: pointer;
+
+        .sidenav-nav-link {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            justify-content: center;
+            margin: auto;
+            height: 3rem;
+            color: $black;
+            text-decoration: none;
+            border-radius: 0.625rem;
+            transition: all 0.3s ease;
+
+            .sidenav-link-icon {
+                font-size: 22px;
+                width: 2rem;
+                min-width: 2rem;
+                margin: 0 0.5rem;
+                text-align: center;
+            }
+
+            .sidenav-link-text {
+                margin-left: 0.2rem;
+            }
+
+            &:hover {
+                color: $white;
+                background-color: $green-theme-colors-light;
+
+                .menu-collapse-icon {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+.nav-config-1{
+    padding-bottom: 0 !important;
+}
+.nav-config-2{
+    padding-top: 0 !important;
+}
+.active {
+    background-color: $green-theme-colors-active;
+
+    .menu-collapse-icon,
+    .sidenav-link-icon,
+    .sidenav-link-text {
+        font-weight: 500;
+        color: $green-theme-colors-light;
+    }
+
+    &:hover {
+        .menu-collapse-icon,
+        .sidenav-link-icon,
+        .sidenav-link-text {
+            color: $white;
+        }
+    }
+}
+
+.active-sublevel {
+    color: $green-theme-colors-light !important;
+}
+
+.menu-collapse-icon {
+    font-size: 25px;
+    width: 2rem;
+    min-width: 2rem;
+    margin: auto 0.5rem auto auto;
+    text-align: center;
+    color: $black;
+}
+
+.sublevel-nav {
+    list-style: none;
+    margin-left: 10px;
+
+    .sublevel-nav-item {
+        .sublevel-nav-link {
+            display: flex;
+            align-items: center;
+            height: 2.8rem;
+            color: $black;
+            text-decoration: none;
+            border-radius: 0.625rem;
+            transition: all 0.3s ease;
+
+            .sublevel-link-icon {
+                font-size: 4px;
+                width: 2rem;
+                min-width: 2rem;
+                margin: 0 0.5rem;
+                text-align: center;
+            }
+
+            &:hover {
+                color: $green-theme-colors-light;
+            }
+        }
+    }
+}
+
+/* SUB HOVER TAB */
+.hover-tab{
+    position: absolute;
+    left: 6.5rem;
+    background-color: $white;
+    padding: 10px;
+    box-shadow: 2px 2px 8px $shadow-color;
+    border-radius: 12px;
+
+    .hover-li{
+        list-style: none;
+        display: flex;
+        width: 100%;
+
+        .hover-link{
+            text-decoration: none;
+            line-height: 1.8;
+            width: 100%;
+            padding: 6px 14px;
+            border-radius: 6px;
+
+            .hover-link-text{
+                font-weight: 500;
+                color: $text-color-2;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .hover-link:hover, .active{
+        background-color: $button-black-background;
+        cursor: pointer;
+
+        .hover-link-text{
+            color: $black !important;
+        }
+    }
+}
+
+.profile-wrapper-main{
+    background-color: $white;
+    width: 100%;
+    height: fit-content;
+
+    hr{
+        margin-top: 0 !important;
+    }
+}
+
+.nav-footer{
+    position: absolute;
+    bottom: 0rem;
+    padding: 0px 14px 14px 14px;
+    width: 100%;
+}
+/* HELP CONTAINER */
+// .help-container{
+//     color: $paragraph-color;
+//     background-color: $white;
+//     display: flex;
+//     gap: 12px;
+//     padding: 14px;
+//     cursor: pointer;
+//     align-items: center;
+//     margin-left: 12px;
+//     position: relative;
+//     bottom: -36px;
+//     visibility: visible !important;
+
+//     h4{
+//         font-weight: 500;
+//     }
+// }
+// .help-collapsed{
+    
+//     margin: auto !important;
+//     margin-top: 24px !important;
+//     margin-left: 10px !important;
+// }
+
+/* USER DATA CONTAINER */
+.user-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    height: 40px;
+
+    .wapper {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+    }
+
+    .user-image {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    h3 {
+        font-weight: 600;
+        color: $black;
+        margin-bottom: 0;
+        cursor: pointer;
+        line-height: 1.4 !important;
+    }
+
+    h5 {
+        font-weight: 400;
+        color: $text-color-2;
+        margin-bottom: 0;
+        cursor: pointer;
+        line-height: 1.4 !important;
+    }
+
+    .exit-button{
+        display: flex;
+        align-items: center;
+        margin-right: 7px;
+
+        #exit-button {
+            font-size: 20px;
+            color: $button-red;
+            cursor: pointer;
+        }    
+    }
+    
+    .exit-collapse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        #exit-button {
+            padding: 12px;
+            border-radius: 10px;
+            background-color: $button-red-background-1;
+            font-size: 18px;
+        }    
+    }
+}
+
+/* SCROLLBAR AND VISIBILITY ON HOVER AND FOCUS */
+.scrollwrap {
+    overflow-y: auto;
+    height: calc(86vh - 40px);
+    visibility: hidden;
+}
+
+.sidenav-nav,
+.scrollwrap:hover,
+.scrollwrap:focus {
+    visibility: visible;
+}
+
+.scrollwrap_delayed {
+    transition: visibility 0.5s 0.2s;
+}
+
+.scrollwrap_delayed:hover {
+    transition: visibility 0.2s 0.2s;
+}
+
+/* SCROLLBAR STYLES (WEBKIT) */
+.scrollwrap::-webkit-scrollbar {
+    width: 4px;
+}
+
+.scrollwrap::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollwrap::-webkit-scrollbar-thumb {
+    background-color: $text-color-2;
+    border-radius: 20px;
+}
+
+/* SCROLLBAR STYLES (FIREFOX) */
+.scrollwrap {
+    scrollbar-width: thin;
+    scrollbar-color: $text-color-2 transparent;
+}
+
+/* CONFIG */
+.subsub-nav-wapper{
+    display: flex;
+
+    .subsub-nav-hr{
+        width: 2px;
+        background-color: $hr-color-2;
+        margin-left: 22px;
+        margin-right: 8px;
+    }
+}
+
+.sub-level-nav-config{
+    border-radius: 8px !important;
+    padding-left: 12px;
+    a{
+        color: $black !important;
+        width: 12rem;
+        
+
+    }
+}
+.sub-level-nav-config:hover{
+    background-color: $button-black-background !important;
+}

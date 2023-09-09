@@ -1,0 +1,40 @@
+@import "../../../../colors.scss";
+
+.card-filter{
+    display: flex;
+    gap: 24px;
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    span{
+        i{
+            padding-top: 1px;
+        }
+    }
+
+    .icon-button{
+        opacity: 0.9;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 8px;
+        background-color: $green-theme-colors-light;
+        cursor: pointer;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+
+        h4{
+            color: $white;
+            margin-bottom: 0;
+        }
+        .fa-truck-fast{
+            color: $white;
+            font-size: 18px !important;
+        }
+    }
+
+    .icon-button:hover{
+        opacity: 1;
+    }
+}
+

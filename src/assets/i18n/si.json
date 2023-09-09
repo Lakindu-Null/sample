@@ -1,0 +1,1275 @@
+{
+  "COMMON": {
+    "BREAD_CRUMB_SUB_TITLE": "පාලන පුවරුව",
+    "SAVE_TOOLTIP": "දත්ත ඇතුලත් කරන්න",
+    "UPDATE_TOOLTIP": "යාවත්කාලීන කරන්න",
+    "DELETE_TOOLTIP": "ඉවත් කරන්න",
+    "PRINT_TOOLTIP": "මුද්රණය කරන්න",
+    "CLEAR_TOOLTIP": "දත්ත හිස් කරන්න",
+    "SEARCH_TITLE": "සොයන්න",
+    "SAVE_ALERT": "දත්ත සාර්ථකව සුරකින ලදී",
+    "UPDATE_ALERT": "දත්ත සාර්ථකව යාවත්කාලීන කරන ලදී",
+    "DELETE_ALERT": "දත්ත ඉවත් කිරීම සාර්ථකයි",
+    "ERROR_ALERT": "ගනුදෙනුව අසාර්ථකයි නැවත උත්සාහ කරන්න",
+    "NOTICE": "දැනුම්දීම",
+    "CONFIRMATION_TITLE": "තහවුරු කිරීම",
+    "SAVE_CONFIRMATION": "ඔබට දත්ත සුරැකීමට අවශ්‍යද ?",
+    "UPDATE_CONFIRMATION": "ඔබට දත්ත යාවත්කාලීන කිරීමට අවශ්‍යද ?",
+    "DELETE_CONFIRMATION": "ඔබට දත්ත මකා දැමීමට අවශ්‍යද ?",
+    "PRINT_CONFIRMATION": "ඔබට දත්ත මුද්‍රණය කිරීමට අවශ්‍යද ?",
+    "BTN_YES": "හරි",
+    "BTN_NO": "එපා",
+    "IMAGE_CHOOSER_HEADER": "රූප තේරීම",
+    "IMAGE_CHOOSER_TAB1": "රූප තේරීම",
+    "IMAGE_CHOOSER_TAB2": "රූපය උඩුගත කිරීම",
+    "IMAGE_CHOOSER_BTN_CONFIRM": "තහවුරු කරන්න",
+    "IMAGE_CHOOSER_BTN_REMOVE": "ඉවත් කරන්න",
+    "IMAGE_CHOOSER_BTN_UPLOAD": "රූපය උඩුගත කරන්න",
+    "IMAGE_CHOOSER_SELECTED_IMAGE": "තෝරාගත් රූපය",
+    "IMAGE_CHOOSER_NOTICE1": "පින්තූර නොමැත. කරුණාකර රූප උඩුගත කරන්න",
+    "IMAGE_CHOOSER_UPLOAD_PROCCESING": "උඩුගත වෙමින් පවතී..",
+    "IMAGE_UPLOAD_SUCCESS_MESSAGE": "පින්තූරය උඩුගත කිරීම සාර්ථකයි",
+    "IMAGE_UPLOAD_FAILED_MESSAGE": "උඩුගත කළ රූපය අසාර්ථක විය",
+    "IMAGE_DELETE_SUCCESS_MESSAGE": "රූපය ඉවත් කරන ලදී",
+    "IMAGE_DELETE_FAILED_MESSAGE": "පින්තූරය ඉවත් කිරීම අසාර්ථක විය",
+    "ERROR_OTHER": "සේවාදායක දෝෂයකි"
+  },
+  "STORE_TYPE": {
+    "ERROR_DUPLICATE": "ගබඩා වර්ගයෙහි නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "ගබඩා වර්ගය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "ගබඩා වර්ගය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "ගබඩා වර්ගය කළමනාකරණය",
+    "TITLE": "ගබඩා වර්ගය",
+    "SUB_TITLE": "ගබඩා වර්ග කළමනාකරණය",
+    "TABLE_TITLE": "ගබඩා වර්ග",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "COMPANY": {
+    "BREAD_CRUMB_TITLE": "සමාගම කළමනාකරණය",
+    "TITLE": "සමාගම",
+    "SUB_TITLE": "කරුණාකර දත්ත පුරවන්න",
+    "TABLE_TITLE": "සමාගම්",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ව්යාපාර ලියාපදිංචි අංකය",
+    "TABLE_HEADER_4": "දුරකථන අංකය",
+    "TABLE_HEADER_5": "ඊතැපැල් ලිපිනය",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම",
+    "FORM_TITLE_3": "ව්යාපාර ලියාපදිංචි අංකය",
+    "FORM_TITLE_4": "ලිපින පේළි 1",
+    "FORM_TITLE_5": "ලිපින පේළි 2",
+    "FORM_TITLE_6": "ලිපින පේළි 3",
+    "FORM_TITLE_7": "දුරකථන අංකය",
+    "FORM_TITLE_8": "ෆැක්ස් අංකය",
+    "FORM_TITLE_9": "ඊතැපැල් ලිපිනය",
+    "FORM_TITLE_10": "වැට් ලියාපදිංචි කර ඇත",
+    "FORM_TITLE_11": "වැට් අංකය",
+    "FORM_TITLE_12": "වැට් ප්‍රතිශතය",
+    "FORM_TITLE_13": "NBT අංකය",
+    "FORM_TITLE_14": "NBT ප්‍රතිශතය",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "සමාගම"
+      }
+    ]
+  },
+  "PRODUCT_CATEGORY": {
+    "ERROR_DUPLICATE": "නිෂ්පාදන කාණ්ඩයේ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "නිෂ්පාදන කාණ්ඩය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "නිෂ්පාදන කාණ්ඩය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "නිෂ්පාදන කාණ්ඩය කළමනාකරණය",
+    "IMAGE_CHOOSE": "රූපය තෝරන්න",
+    "TITLE": "නිෂ්පාදන කාණ්ඩය",
+    "SUB_TITLE": "නිෂ්පාදන කාණ්ඩය කළමනාකරණය",
+    "TABLE_TITLE": "නිෂ්පාදන කාණ්ඩය",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "රූප",
+    "TABLE_HEADER_3": "මාපිය කාණ්ඩය",
+    "TABLE_HEADER_4": "කාණ්ඩය",
+    "TABLE_HEADER_5": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_6": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "මාපිය කාණ්ඩය",
+    "FORM_TITLE_2": "කාණ්ඩයේ නම"
+  },
+  "BANK": {
+    "ERROR_DUPLICATE": "බැංකු නම හෝ බැංකු කේතය දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "බැංකු දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "බැංකුව"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "බැංකුව කළමනාකරණය",
+    "TITLE": "බැංකුව",
+    "SUB_TITLE": "බැංකු කළමනාකරණය ",
+    "TABLE_TITLE": "බැංකු",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "අංකය",
+    "FORM_TITLE_1": "නම",
+    "FORM_TITLE_2": "අංකය"
+  },
+  "STORE": {
+    "ERROR_DUPLICATE": "ගබඩා නාමය දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "ගබඩා දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "ගබඩාව"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "ගබඩාව කළමනාකරණය",
+    "TITLE": "ගබඩාව",
+    "SUB_TITLE": "ගබඩා කළමනාකරණය",
+    "TABLE_TITLE": "ගබඩා",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "දුරකථන අංකය",
+    "FORM_TITLE_1": "ගබඩා වර්ගය",
+    "FORM_TITLE_2": "නම",
+    "FORM_TITLE_3": "දුරකථන අංකය",
+    "FORM_TITLE_4": "ලිපින පේළි 1",
+    "FORM_TITLE_5": "ලිපින පේළි 2",
+    "FORM_TITLE_6": "ලිපින පේළි 3",
+    "FORM_TITLE_7": "ඇමතිය යුතු පුද්ගලයා",
+    "FORM_TITLE_8": "සම්බන්ධතා පුද්ගල අංකය",
+    "FORM_TITLE_9": "උපකාරක 1",
+    "FORM_TITLE_10": "උපකාරක 2",
+    "FORM_TITLE_11": "උපකාරක 3",
+    "FORM_TITLE_12": "ගබඩා භාරකරු"
+  },
+  "DISTRICT": {
+    "ERROR_DUPLICATE": "දිස්ත්‍රික්ක නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "දිස්ත්‍රික්කය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "දිස්ත්‍රික්කය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "දිස්ත්‍රික්කය කළමනාකරණය",
+    "TITLE": "දිස්ත්‍රික්කය",
+    "SUB_TITLE": "දිස්ත්‍රික්ක කළමනාකරණය",
+    "TABLE_TITLE": "දිස්ත්‍රික්ක",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "DEPARTMENT": {
+    "ERROR_DUPLICATE": "දෙපාර්තමේන්තු නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "දෙපාර්තමේන්තුව දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "දෙපාර්තමේන්තුව"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "දෙපාර්තමේන්තුව කළමනාකරණය",
+    "TITLE": "දෙපාර්තමේන්තුව",
+    "SUB_TITLE": "දෙපාර්තමේන්තු කළමනාකරණය",
+    "TABLE_TITLE": "දෙපාර්තමේන්තු",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "QUALITY_PARAMETER": {
+    "ERROR_DUPLICATE": "ගුණාත්මක පරාමිතියෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "ගුණාත්මක පරාමිතිය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "ගුණාත්මක පරාමිතිය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "ගුණාත්මක පරාමිතිය කළමනාකරණය",
+    "TITLE": "ගුණාත්මක පරාමිතිය",
+    "SUB_TITLE": "ගුණාත්මක පරාමිති කළමනාකරණය",
+    "TABLE_TITLE": "ගුණාත්මක පරාමිති",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "VEHILCE_TYPE": {
+    "ERROR_DUPLICATE": "වාහන වර්ගයෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "වාහන වර්ගය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "වාහන වර්ගය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "වාහන වර්ගය කළමනාකරණය",
+    "TITLE": "වාහන වර්ගය",
+    "SUB_TITLE": "වාහන වර්ග කළමනාකරණය",
+    "TABLE_TITLE": "වාහන වර්ග",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "REASON_CATEGORY": {
+    "ERROR_DUPLICATE": "හේතු කාණ්ඩයෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "හේතු කාණ්ඩය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "හේතු කාණ්ඩය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "හේතු කාණ්ඩය කළමනාකරණය",
+    "TITLE": "හේතු කාණ්ඩය",
+    "SUB_TITLE": "හේතු කාණ්ඩ කළමනාකරණය",
+    "TABLE_TITLE": "හේතු කාණ්ඩ",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "TAX_TYPE": {
+    "ERROR_DUPLICATE": "බදු වර්ගයෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "බදු වර්ගය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "බදු වර්ගය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "බදු වර්ගය කළමනාකරණය",
+    "TITLE": "බදු වර්ගය",
+    "SUB_TITLE": "බදු වර්ග කළමනාකරණය",
+    "TABLE_TITLE": "බදු වර්ග",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "VOLUME_TYPE": {
+    "ERROR_DUPLICATE": "පරිමා වර්ගයෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "පරිමා වර්ගය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "පරිමා වර්ගය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "පරිමා වර්ගය කළමනාකරණය",
+    "TITLE": "පරිමා වර්ගය",
+    "SUB_TITLE": "පරිමා වර්ග කළමනාකරණය",
+    "TABLE_TITLE": "පරිමා වර්ග",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "MACHINE_TYPE": {
+    "ERROR_DUPLICATE": "යන්ත්‍ර වර්ගයෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "යන්ත්‍ර වර්ගය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "යන්ත්‍ර වර්ගය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "යන්ත්‍ර වර්ගය කළමනාකරණය",
+    "TITLE": "යන්ත්‍ර වර්ගය",
+    "SUB_TITLE": "යන්ත්‍ර වර්ග කළමනාකරණය",
+    "TABLE_TITLE": "යන්ත්‍ර වර්ග",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "SUPPLIER_GROUP": {
+    "ERROR_DUPLICATE": "සැපයුම් කණ්ඩායමෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "සැපයුම් කණ්ඩායම දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "සැපයුම් කණ්ඩායම"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "සැපයුම් කණ්ඩායම කළමනාකරණය",
+    "TITLE": "සැපයුම් කණ්ඩායම",
+    "SUB_TITLE": "සැපයුම් කණ්ඩායම් කළමනාකරණය",
+    "TABLE_TITLE": "සැපයුම් කණ්ඩායම්",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "AREA": {
+    "ERROR_DUPLICATE": "ප්‍රදේශය දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "ප්‍රදේශය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "ප්‍රදේශය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "ප්‍රදේශය කළමනාකරණය",
+    "TITLE": "ප්‍රදේශය",
+    "SUB_TITLE": "ප්‍රදේශ කළමනාකරණය",
+    "TABLE_TITLE": "ප්‍රදේශ",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "දිස්ත්‍රික්කය",
+    "TABLE_HEADER_3": "ප්‍රදේශය",
+    "TABLE_HEADER_4": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_5": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "දිස්ත්‍රික්කය",
+    "FORM_TITLE_2": "ප්‍රදේශයේ නම"
+  },
+  "CITY": {
+    "ERROR_DUPLICATE": "නගරයේ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "නගරය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "නගරය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "නගරය කළමනාකරණය",
+    "TITLE": "නගරය",
+    "SUB_TITLE": "නගර කළමනාකරණය",
+    "TABLE_TITLE": "නගර",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "දිස්ත්‍රික්කය",
+    "TABLE_HEADER_3": "නගරය",
+    "TABLE_HEADER_4": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_5": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "දිස්ත්‍රික්කය",
+    "FORM_TITLE_2": "නගරයේ නම"
+  },
+  "ROUTE": {
+    "ERROR_DUPLICATE": "මාර්ගයේ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "මාර්ගය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "මාර්ගය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "මාර්ගය කළමනාකරණය",
+    "TITLE": "මාර්ගය",
+    "SUB_TITLE": "මාර්ග කළමනාකරණය",
+    "TABLE_TITLE": "මාර්ග",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "ප්‍රදේශය",
+    "TABLE_HEADER_3": "මාර්ගය",
+    "TABLE_HEADER_4": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_5": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "ප්‍රදේශය",
+    "FORM_TITLE_2": "මාර්ගයේ නම"
+  },
+  "REASON": {
+    "ERROR_DUPLICATE": "හේතුවෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "හේතුව දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "හේතුව"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "හේතුව කළමනාකරණය",
+    "TITLE": "හේතුව",
+    "SUB_TITLE": "හේතු කළමනාකරණය",
+    "TABLE_TITLE": "හේතු",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "හේතු කාණ්ඩය",
+    "TABLE_HEADER_3": "හේතුව",
+    "TABLE_HEADER_4": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_5": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "හේතු කාණ්ඩය",
+    "FORM_TITLE_2": "හේතුවෙ නම"
+  },
+  "MACHINE": {
+    "ERROR_DUPLICATE": "යන්ත්‍රයේ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "යන්ත්‍රය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "යන්ත්‍රය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "යන්ත්‍රය කළමනාකරණය",
+    "TITLE": "යන්ත්‍රය",
+    "SUB_TITLE": "යන්ත්‍ර කළමනාකරණය",
+    "TABLE_TITLE": "යන්ත්‍ර",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "යන්ත්‍ර වර්ගය",
+    "TABLE_HEADER_3": "යන්ත්‍රය",
+    "TABLE_HEADER_4": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_5": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "යන්ත්‍ර වර්ගය",
+    "FORM_TITLE_2": "යන්ත්‍රයේ නම",
+    "FORM_TITLE_3": "ධාරිතා වර්ගය",
+    "FORM_TITLE_4": "යන්ත්‍ර ධාරිතාව",
+    "FORM_TITLE_5": "අශ්ව බල    ",
+    "FORM_TITLE_6": "RPM",
+    "FORM_TITLE_7": "ඉන්ධන වර්ගය",
+    "FORM_TITLE_8": "විදුලි වර්ගය"
+  },
+  "DRIVER": {
+    "ERROR_DUPLICATE": "රියදුරු නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "රියදුරු දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "රියදුරු"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "රියදුරු කළමනාකරණය",
+    "TITLE": "රියදුරු",
+    "SUB_TITLE": "රියදුරු කළමනාකරණය",
+    "TABLE_TITLE": "රියදුරු",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "රියදුරු",
+    "TABLE_HEADER_3": "ඇමතුම් අංකය",
+    "TABLE_HEADER_4": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_5": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "නම",
+    "FORM_TITLE_2": "ජාතික හැඳුනුම්පත් අංකය",
+    "FORM_TITLE_3": "ඇමතුම් අංකය",
+    "FORM_TITLE_4": "ලිපින පේළි 1",
+    "FORM_TITLE_5": "ලිපින පේළි 2",
+    "FORM_TITLE_6": "ලිපින පේළි 3"
+  },
+  "COLOR": {
+    "ERROR_DUPLICATE": "වර්ණයෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "වර්ණය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "වර්ණය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "වර්ණ කළමනාකරණය",
+    "TITLE": "වර්ණ",
+    "SUB_TITLE": "වර්ණ කළමනාකරණය",
+    "TABLE_TITLE": "වර්ණ",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "වර්ණය",
+    "TABLE_HEADER_3": "නම",
+    "TABLE_HEADER_4": "වර්ණ කේතය",
+    "TABLE_HEADER_5": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_6": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "වර්ණයෙ නම",
+    "FORM_TITLE_2": "වර්ණය"
+  },
+  "VEHICLE": {
+    "ERROR_DUPLICATE": "වාහන ලියාපදිංචි අංකය දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "වාහනය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "වාහනය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "වාහනය කළමනාකරණය",
+    "TITLE": "වාහනය",
+    "SUB_TITLE": "වාහන කළමනාකරණය",
+    "TABLE_TITLE": "වාහනය",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "වාහන වර්ගය",
+    "TABLE_HEADER_3": "වාහන ලියාපදිංචි අංකය",
+    "TABLE_HEADER_4": "වෙළඳ නාමය",
+    "TABLE_HEADER_5": "ඉන්ධන වර්ගය",
+    "TABLE_HEADER_6": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_7": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "වාහන වර්ගය",
+    "FORM_TITLE_2": "වාහන ලියාපදිංචි අංකය",
+    "FORM_TITLE_3": "වෙළඳ නාමය",
+    "FORM_TITLE_4": "ආකෘතිය",
+    "FORM_TITLE_5": "ඉන්ධන වර්ගය",
+    "FORM_TITLE_6": "සාමාන්ය ඉන්ධන පරිභෝජනය",
+    "FORM_TITLE_7": "බලපත්‍රය අලුත් කිරීමේ දිනය",
+    "FORM_TITLE_8": "රක්ෂණ දිනය",
+    "FORM_TITLE_9": "රූපය"
+  },
+  "ORDER_TYPE": {
+    "ERROR_DUPLICATE": "ඇණවුම් වර්ගයෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "ඇණවුම් වර්ගය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "ඇණවුම් වර්ගය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "ඇණවුම් වර්ගය කළමනාකරණය",
+    "TITLE": "ඇණවුම් වර්ගය",
+    "SUB_TITLE": "ඇණවුම් වර්ග කළමනාකරණය",
+    "TABLE_TITLE": "ඇණවුම් වර්ග",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_4": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "අංකය",
+    "FORM_TITLE_2": "නම"
+  },
+  "BRANCH": {
+    "ERROR_DUPLICATE": "ශාඛාවේ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "ශාඛාව දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "ශාඛාව"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "ශාඛාව කළමනාකරණය",
+    "TITLE": "ශාඛාව",
+    "SUB_TITLE": "ශාඛා කළමනාකරණය",
+    "TABLE_TITLE": "ශාඛා",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "නම",
+    "TABLE_HEADER_3": "කළමනාකරුගේ නම",
+    "TABLE_HEADER_4": "ඇමතුම් අංකය",
+    "TABLE_HEADER_5": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_6": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "නම",
+    "FORM_TITLE_2": "කළමනාකරුගේ නම",
+    "FORM_TITLE_3": "උපකාරක පුද්ගලයා 1",
+    "FORM_TITLE_4": "ඇමතුම් අංකය",
+    "FORM_TITLE_5": "විද්යුත් තැපෑල",
+    "FORM_TITLE_6": "ලිපින පේළි 1",
+    "FORM_TITLE_7": "ලිපින පේළි 2",
+    "FORM_TITLE_8": "ලිපින පේළි 3"
+  },
+  "SALESPERSON": {
+    "ERROR_DUPLICATE": "විකුණුම් පුද්ගලයාගේ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "විකුණුම් පුද්ගලයා දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "විකුණුම් පුද්ගලයා"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "විකුණුම් පුද්ගලයා කළමනාකරණය",
+    "IMAGE_CHOOSE": "රූපය තෝරන්න",
+    "TITLE": "විකුණුම් පුද්ගලයා",
+    "SUB_TITLE": "විකුණුම් පුද්ගලයින් කළමනාකරණය",
+    "TABLE_TITLE": "විකුණුම් පුද්ගලයින්",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "රූපය",
+    "TABLE_HEADER_3": "නම",
+    "TABLE_HEADER_4": "සම්බන්ධතා අංකය",
+    "TABLE_HEADER_5": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_6": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "මුල් නම",
+    "FORM_TITLE_2": "අවසන් නම",
+    "FORM_TITLE_3": "ජාතික හැඳුනුම්පත් අංකය",
+    "FORM_TITLE_4": "සම්බන්ධතා අංකය",
+    "FORM_TITLE_5": "ලිපින පේළි 1",
+    "FORM_TITLE_6": "ලිපින පේළි 2",
+    "FORM_TITLE_7": "ලිපින පේළි 3",
+    "FORM_TITLE_8": "තැන්පතු",
+    "FORM_TITLE_9": "රූප",
+    "FORM_TITLE_10": "විකුණුම් පුද්ගල වර්ගය",
+    "FORM_TITLE_11": "වාහන"
+  },
+  "SUPPLIER": {
+    "ERROR_DUPLICATE": "සැපයුම්කරුගේ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "සැපයුම්කරුගේ දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "ACCOUNT_ERROR_DUPLICATE": "ගිණුම් අංකය දැනටමත් පවතී",
+    "ACCOUNT_ERROR_KEY_CONSTRAINT": "ගිණුම් දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "TAX_ERROR_DUPLICATE": "බදු අංකය දැනටමත් පවතී",
+    "TAX_ERROR_KEY_CONSTRAINT": "බදු දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "සැපයුම්කරු"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "සැපයුම්කරු කළමනාකරණය",
+    "IMAGE_CHOOSE": "රූපය තෝරන්න",
+    "TITLE_SUPPLIER": "සැපයුම්කරුගේ පුද්ගලික විස්තර",
+    "SUB_TITLE_SUPPLIER": "සැපයුම්කරුගේ පුද්ගලික තොරතුරු කළමනාකරණය",
+    "TITLE_ACCOUNT": "සැපයුම්කරුගේ ගිණුම් විස්තර",
+    "SUB_TITLE_ACCOUNT": "සැපයුම්කරු ගිණුම් විස්තර කළමනාකරණය ",
+    "TITLE_TAX": "සැපයුම්කරුගේ බදු විස්තර",
+    "SUB_TITLE_TAX": "සැපයුම්කරුගේ බදු විස්තර කළමනාකරණය ",
+    "TITLE_CART_ACCOUNT": "සැපයුම්කරුගේ ගිණුම් විස්තර ලැයිස්තුව",
+    "TITLE_CART_TAX": "සැපයුම්කරුගේ බදු විස්තර ලැයිස්තුව",
+    "TABLE_TITLE": "සැපයුම්කරුවන්",
+    "FORM_SUPPLIER_TITLE_1": "සැපයුම් කණ්ඩායම",
+    "FORM_SUPPLIER_TITLE_2": "සැපයුම්කරුගේ නම",
+    "FORM_SUPPLIER_TITLE_3": "සම්බන්ධතා අංකය",
+    "FORM_SUPPLIER_TITLE_4": "ෆැක්ස්",
+    "FORM_SUPPLIER_TITLE_5": "විද්යුත් තැපෑල",
+    "FORM_SUPPLIER_TITLE_6": "ලිපින පේළි 1",
+    "FORM_SUPPLIER_TITLE_7": "ලිපින පේළි 2",
+    "FORM_SUPPLIER_TITLE_8": "ලිපින පේළි 3",
+    "FORM_SUPPLIER_TITLE_9": "ණය සීමාව",
+    "FORM_SUPPLIER_TITLE_10": "බද්ද",
+    "TABLE_ACCOUNT_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_ACCOUNT_HEADER_2": "බැංකුව",
+    "TABLE_ACCOUNT_HEADER_3": "ශාඛාව",
+    "TABLE_ACCOUNT_HEADER_4": "ගිණුමේ නම",
+    "TABLE_ACCOUNT_HEADER_5": "ගිණුම් අංකය",
+    "FORM_ACCOUNT_TITLE_1": "බැංකුව",
+    "FORM_ACCOUNT_TITLE_2": "ශාඛාව",
+    "FORM_ACCOUNT_TITLE_3": "ගිණුමේ නම",
+    "FORM_ACCOUNT_TITLE_4": "ගිණුම් අංකය",
+    "TABLE_TAX_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_TAX_HEADER_2": "බදු වර්ගය",
+    "TABLE_TAX_HEADER_3": "නම",
+    "TABLE_TAX_HEADER_4": "බදු අංකය",
+    "FORM_TAX_TITLE_1": "බදු වර්ගය",
+    "FORM_TAX_TITLE_2": "බදු අංකය"
+  },
+  "PACKING_MATERIAL": {
+    "ERROR_DUPLICATE": "ඇසුරුම් ද්‍රව්‍ය නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "ඇසුරුම් ද්‍රව්‍ය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "ඇසුරුම් ද්‍රව්‍ය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "ඇසුරුම් ද්‍රව්‍ය කළමනාකරණය",
+    "TITLE": "ඇසුරුම් ද්‍රව්‍ය",
+    "SUB_TITLE": "ඇසුරුම් ද්‍රව්‍ය කළමනාකරණය",
+    "TABLE_TITLE": "ඇසුරුම් ද්‍රව්‍ය",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "ප්‍රධාන කාණ්ඩය",
+    "TABLE_HEADER_3": "උප කාණ්ඩය",
+    "TABLE_HEADER_4": "නම",
+    "TABLE_HEADER_5": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_6": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "ප්‍රධාන කාණ්ඩය",
+    "FORM_TITLE_2": "උප කාණ්ඩය",
+    "FORM_TITLE_3": "නම",
+    "FORM_TITLE_4": "HS කේතය",
+    "FORM_TITLE_5": "රහස් කේතය",
+    "FORM_TITLE_6": "පරිමා වර්ගය",
+    "FORM_TITLE_7": "ඇසුරුම් ප්‍රමාණය",
+    "FORM_TITLE_8": "උප ඒකකය",
+    "FORM_TITLE_9": "උපරිම මට්ටම",
+    "FORM_TITLE_10": "අවම මට්ටම",
+    "FORM_TITLE_11": "නැවත ඇණවුම් මට්ටම",
+    "FORM_TITLE_12": "නැවත ඇණවුම් ප්‍රමාණය",
+    "FORM_TITLE_13": "ආනයන ලාභ ආන්තිකය",
+    "FORM_TITLE_14": "පූරක කාලය"
+  },
+  "RAW_MATERIAL": {
+    "ERROR_DUPLICATE": "අමුද්‍රව්‍ය නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "අමුද්‍රව්‍ය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "අමුද්‍රව්‍ය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "අමුද්‍රව්‍ය කළමනාකරණය",
+    "TITLE": "අමුද්‍රව්‍ය",
+    "SUB_TITLE": "අමුද්‍රව්‍ය ද්‍රව්‍ය කළමනාකරණය",
+    "TABLE_TITLE": "අමුද්‍රව්‍ය",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "ප්‍රධාන කාණ්ඩය",
+    "TABLE_HEADER_3": "උප කාණ්ඩය",
+    "TABLE_HEADER_4": "නම",
+    "TABLE_HEADER_5": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_6": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "ප්‍රධාන කාණ්ඩය",
+    "FORM_TITLE_2": "උප කාණ්ඩය",
+    "FORM_TITLE_3": "නම",
+    "FORM_TITLE_4": "HS කේතය",
+    "FORM_TITLE_5": "රහස් කේතය",
+    "FORM_TITLE_6": "පරිමා වර්ගය",
+    "FORM_TITLE_7": "ඇසුරුම් ප්‍රමාණය",
+    "FORM_TITLE_8": "උපරිම මට්ටම",
+    "FORM_TITLE_9": "අවම මට්ටම",
+    "FORM_TITLE_10": "නැවත ඇණවුම් මට්ටම",
+    "FORM_TITLE_11": "නැවත ඇණවුම් ප්‍රමාණය",
+    "FORM_TITLE_12": "ආනයන ලාභ ආන්තිකය",
+    "FORM_TITLE_13": "පූරක කාලය"
+  },
+  "PASTE_ITEM": {
+    "ERROR_DUPLICATE": "පේස්ට් අයිතමය නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "අමුද්‍රව්‍ය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "ERROR_DUPLICATE_QUALITY_PARAMETER": "ගුණාත්මක පරාමිතිය දැනටමත් පවතී",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "පේස්ට් අයිතමය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "පේස්ට් අයිතමය කළමනාකරණය",
+    "TITLE": "පේස්ට් අයිතමය",
+    "SUB_TITLE": "පේස්ට් අයිතම කළමනාකරණය",
+    "TABLE_TITLE": "පේස්ට් අයිතම",
+    "TITLE_QUALITY_PARAMETER_DETAILS": "ගුණාත්මක පරාමිති විස්තර ",
+    "TITLE_QUALITY_PARAMETER_CART": "ගුණාත්මක පරාමිති ලැයිස්තුව",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "ප්‍රධාන කාණ්ඩය",
+    "TABLE_HEADER_3": "උප කාණ්ඩය",
+    "TABLE_HEADER_4": "නම",
+    "TABLE_HEADER_5": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_6": "ඇතුළු කළ පුද්ගලයා",
+    "TABLE_QUALITY_PARAMETER_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_QUALITY_PARAMETER_HEADER_2": "ගුණාත්මක පරාමිතිය",
+    "TABLE_QUALITY_PARAMETER_HEADER_3": "විස්තරය",
+    "FORM_TITLE_1": "ප්‍රධාන කාණ්ඩය",
+    "FORM_TITLE_2": "උප කාණ්ඩය",
+    "FORM_TITLE_3": "නම",
+    "FORM_TITLE_4": "පරිමා වර්ගය",
+    "FORM_TITLE_5": "උපරිම මට්ටම",
+    "FORM_TITLE_6": "අවම මට්ටම",
+    "FORM_TITLE_7": "උපරිම රැඳවුම් දින",
+    "FORM_TITLE_8": "බහු කණ්ඩායමකට අවසර ඇත",
+    "FORM_TITLE_9": "කණ්ඩායම් සංඛ්යාව",
+    "FORM_QUALITY_PARAMETER_TITLE_1": "ගුණාත්මක පරාමිතිය",
+    "FORM_QUALITY_PARAMETER_TITLE_2": "විස්තරය"
+  },
+  "SAMPLE_PRODUCT": {
+    "ERROR_DUPLICATE": "නියැදි නිෂ්පාදනයෙ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "නියැදි නිෂ්පාදනය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "නියැදි නිෂ්පාදනය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "නියැදි නිෂ්පාදනය කළමනාකරණය",
+    "TITLE": "නියැදි නිෂ්පාදනය",
+    "SUB_TITLE": "නියැදි නිෂ්පාදන කළමනාකරණය",
+    "TABLE_TITLE": "නියැදි නිෂ්පාදන",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "ප්‍රධාන කාණ්ඩය",
+    "TABLE_HEADER_3": "උප කාණ්ඩය",
+    "TABLE_HEADER_4": "නම",
+    "TABLE_HEADER_5": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_6": "ඇතුළු කළ පුද්ගලයා",
+    "FORM_TITLE_1": "ප්‍රධාන කාණ්ඩය",
+    "FORM_TITLE_2": "උප කාණ්ඩය",
+    "FORM_TITLE_3": "වර්ණය",
+    "FORM_TITLE_4": "නම",
+    "FORM_TITLE_5": "පරිමා වර්ගය",
+    "FORM_TITLE_6": "ඇසුරුම් ප්‍රමාණය",
+    "FORM_TITLE_7": "උපරිම මට්ටම",
+    "FORM_TITLE_8": "අවම මට්ටම"
+  },
+  "FINISH_GOODS": {
+    "ERROR_DUPLICATE": "නිමි භාණ්ඩයේ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "නිමි භාණ්ඩය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "ERROR_DUPLICATE_QUALITY_PARAMETER": "ගුණාත්මක පරාමිතිය දැනටමත් පවතී",
+    "ERROR_DUPLICATE_PACKING_MATERIAL": "ඇසුරුම් ද්‍රව්‍ය දැනටමත් පවතී",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "නිමි භාණ්ඩ"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "නිමි භාණ්ඩ කළමනාකරණය",
+    "TITLE": "නිමි භාණ්ඩ",
+    "IMAGE_CHOOSE": "රූපය තෝරන්න",
+    "SUB_TITLE": "නිමි භාණ්ඩ කළමනාකරණය",
+    "TABLE_TITLE": "නිමි භාණ්ඩ",
+    "TITLE_QUALITY_PARAMETER_DETAILS": "ගුණාත්මක පරාමිති විස්තර ",
+    "TITLE_QUALITY_PARAMETER_CART": "ගුණාත්මක පරාමිති ලැයිස්තුව",
+    "TITLE_PACKING_MATERIAL_DETAILS": "ඇසුරුම් ද්‍රව්‍ය විස්තර",
+    "TITLE_PACKING_MATERIAL_CART": "ඇසුරුම් ද්‍රව්‍ය ලැයිස්තුව",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "රූපය",
+    "TABLE_HEADER_3": "ප්‍රධාන කාණ්ඩය",
+    "TABLE_HEADER_4": "උප කාණ්ඩය",
+    "TABLE_HEADER_5": "නම",
+    "TABLE_HEADER_6": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_7": "ඇතුළු කළ පුද්ගලයා",
+    "TABLE_QUALITY_PARAMETER_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_QUALITY_PARAMETER_HEADER_2": "ගුණාත්මක පරාමිතිය",
+    "TABLE_QUALITY_PARAMETER_HEADER_3": "විස්තරය",
+    "TABLE_PACKING_MATERIAL_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_PACKING_MATERIAL_HEADER_2": "ඇසුරුම් ද්‍රව්‍ය",
+    "TABLE_PACKING_MATERIAL_HEADER_3": "ප්‍රමාණය",
+    "FORM_TITLE_1": "ප්‍රධාන කාණ්ඩය",
+    "FORM_TITLE_2": "උප කාණ්ඩය",
+    "FORM_TITLE_3": "වර්ණය",
+    "FORM_TITLE_4": "නම",
+    "FORM_TITLE_5": "පරිමා වර්ගය",
+    "FORM_TITLE_6": "ඇසුරුම් ප්‍රමාණය",
+    "FORM_TITLE_7": "වට්ටම",
+    "FORM_TITLE_8": "උපරිම වට්ටම",
+    "FORM_TITLE_9": "උපරිම සිල්ලර මිල",
+    "FORM_TITLE_10": "උපරිම මට්ටම",
+    "FORM_TITLE_11": "අවම මට්ටම",
+    "FORM_TITLE_12": "උපරිම ණය දින",
+    "FORM_TITLE_13": "උපරිම WPD ණය දින",
+    "FORM_TITLE_14": "අලෙවිකරණ ලාභ ආන්තිකය",
+    "FORM_TITLE_15": "නිෂ්පාදන ලාභ ආන්තිකය",
+    "FORM_TITLE_16": "වෙන් කළ ඉන්වොයිසි භාණ්ඩය",
+    "FORM_TITLE_17": "වෙබ් සබල කර ඇත",
+    "FORM_TITLE_18": "රූප",
+    "FORM_QUALITY_PARAMETER_TITLE_1": "ගුණාත්මක පරාමිතිය",
+    "FORM_QUALITY_PARAMETER_TITLE_2": "විස්තරය",
+    "FORM_PACKING_MATERIAL_TITLE_1": "ඇසුරුම් ද්‍රව්‍ය",
+    "FORM_PACKING_MATERIAL_TITLE_2": "ප්‍රමාණය"
+  },
+  "RECIPE_ITEM": {
+    "ERROR_DUPLICATE": "වට්ටෝරු අයිතමයේ නම දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "වට්ටෝරු අයිතමය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "ERROR_DUPLICATE_QUALITY_PARAMETER": "ගුණාත්මක පරාමිතිය දැනටමත් පවතී",
+    "ERROR_DUPLICATE_FINISH_GOODS": "නිමි භාණ්ඩය දැනටමත් පවතී",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "වට්ටෝරු අයිතමය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "වට්ටෝරු අයිතමය කළමනාකරණය",
+    "TITLE": "වට්ටෝරු අයිතමය",
+    "SUB_TITLE": "වට්ටෝරු අයිතම කළමනාකරණය",
+    "TABLE_TITLE": "වට්ටෝරු අයිතම",
+    "TITLE_QUALITY_PARAMETER_DETAILS": "ගුණාත්මක පරාමිති විස්තර ",
+    "TITLE_QUALITY_PARAMETER_CART": "ගුණාත්මක පරාමිති ලැයිස්තුව",
+    "TITLE_FINISH_GOODS_DETAILS": "නිමි භාණ්ඩ විස්තර",
+    "TITLE_FINISH_GOODS_CART": "නිමි භාණ්ඩ ලැයිස්තුව",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "ප්‍රධාන කාණ්ඩය",
+    "TABLE_HEADER_3": "උප කාණ්ඩය",
+    "TABLE_HEADER_4": "නම",
+    "TABLE_HEADER_5": "ඇතුළු කළ දිනය",
+    "TABLE_HEADER_6": "ඇතුළු කළ පුද්ගලයා",
+    "TABLE_QUALITY_PARAMETER_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_QUALITY_PARAMETER_HEADER_2": "ගුණාත්මක පරාමිතිය",
+    "TABLE_QUALITY_PARAMETER_HEADER_3": "විස්තරය",
+    "TABLE_FINISH_GOODS_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_FINISH_GOODS_HEADER_2": "නිමි භාණ්ඩය",
+    "FORM_TITLE_1": "ප්‍රධාන කාණ්ඩය",
+    "FORM_TITLE_2": "උප කාණ්ඩය",
+    "FORM_TITLE_3": "නම",
+    "FORM_TITLE_4": "පරිමා වර්ගය",
+    "FORM_TITLE_5": "උපරිම මට්ටම",
+    "FORM_TITLE_6": "අවම මට්ටම",
+    "FORM_TITLE_7": "උපරිම රැඳවුම් දින",
+    "FORM_TITLE_8": "බහු කණ්ඩායමකට අවසර ඇත",
+    "FORM_TITLE_9": "කණ්ඩායම් සංඛ්යාව",
+    "FORM_QUALITY_PARAMETER_TITLE_1": "ගුණාත්මක පරාමිතිය",
+    "FORM_QUALITY_PARAMETER_TITLE_2": "විස්තරය",
+    "FORM_FINISH_GOODS_TITLE_1": "නිමි භාණ්ඩය"
+  },
+  "CUSTOMER": {
+    "WARNING_MSG_PERSONAL_DETAIL": "ඔබ පුද්ගලික දත්තවල අවශ්‍ය සියලුම ගොනු පිරවිය යුතුය",
+    "WARNING_MSG_REP_DETAIL": "ඔබ විකුණුම් නියෝජිත විස්තර එකතු කළ යුතුය",
+    "WARNING_MSG_OWNER_DETAIL": "ඔබ හිමිකරු/අධ්‍යක්ෂක විස්තර එක් කළ යුතුය",
+    "WARNING_MSG_CONTACT_PERSON_DETAIL": "ඔබ සම්බන්ධතා පුද්ගල විස්තර එක් කළ යුතුය",
+    "WARNING_MSG_TAX_DETAIL": "ඔබ බදු විස්තර එකතු කළ යුතුය",
+    "WARNING_MSG_ACCOUNT_DETAIL": "ඔබ ගිණුම් විස්තර එක් කළ යුතුය",
+    "WARNING_MSG_CREDIT_APPROVAL_DETAIL": "ඔබ ණය අනුමත කිරීමේ දත්තවල අවශ්‍ය සියලුම ගොනු පිරවිය යුතුය",
+    "WARNING_MSG_ITEM_DETAIL": "ඔබ අයිතම විස්තර එකතු කළ යුතුය",
+    "ERROR_DUPLICATE": "පාරිභෝගික සම්බන්ධතා අංකය හෝ BR අංකය දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "පාරිභෝගික දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "REP_ERROR_DUPLICATE": "නියෝජිතයා දැනටමත් පවතී",
+    "REP_ERROR_KEY_CONSTRAINT": "නියෝජිත දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "OWNER_ERROR_DUPLICATE": "හිමිකරු/අධ්‍යක්ෂක BR/NIC අංකය දැනටමත් පවතී",
+    "OWNER_ERROR_KEY_CONSTRAINT": "හිමිකරු/අධ්‍යක්ෂක දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "CONTACT_PEARSON_ERROR_DUPLICATE": "සම්බන්ධතා පුද්ගලයා දැනටමත් පවතී",
+    "CONTACT_PEARSON_ERROR_KEY_CONSTRAINT": "සම්බන්ධතා පුද්ගල දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "ACCOUNT_ERROR_DUPLICATE": "ගිණුම් අංකය දැනටමත් පවතී",
+    "ACCOUNT_ERROR_KEY_CONSTRAINT": "ගිණුම් දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "TAX_ERROR_DUPLICATE": "බදු අංකය දැනටමත් පවතී",
+    "TAX_ERROR_KEY_CONSTRAINT": "බදු දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BRANCH_ERROR_DUPLICATE": "ශාඛාවේ නම දැනටමත් පවතී",
+    "BRANCH_ERROR_KEY_CONSTRAINT": "ශාඛා දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "ITEM_ERROR_DUPLICATE": "නිෂ්පාදනය දැනටමත් පවතී",
+    "ITEM_ERROR_KEY_CONSTRAINT": "නිෂ්පාදන දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "PERSONAL_ERROR_DUPLICATE": "BR අංකය හෝ සම්බන්ධතා අංකය දැනටමත් පවතී",
+    "PERSONAL_ERROR_KEY_CONSTRAINT": "පුද්ගලික දත්ත දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "පාරිභෝගිකයා"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "පාරිභෝගිකයා කළමනාකරණය",
+    "TITLE_PERSONAL": "පුද්ගලික තොරතුරු",
+    "SUB_TITLE_PERSONAL": "පුද්ගලික විස්තර කළමනාකරණය ",
+    "TITLE_REP": "විකුණුම් නියෝජිත විස්තරය",
+    "SUB_TITLE_REP": "නියෝජිත විස්තර කළමනාකරණය ",
+    "TITLE_CART_REP": "නියෝජිත විස්තර ලැයිස්තුව",
+    "TITLE_OWNER": "හිමිකරු/අධ්‍යක්ෂක විස්තර",
+    "SUB_TITLE_OWNER": "හිමිකරු/අධ්‍යක්ෂක විස්තර කළමනාකරණය",
+    "TITLE_CART_OWNER": "හිමිකරු/අධ්‍යක්ෂක විස්තර ලැයිස්තුව",
+    "TITLE_CONTACT_PEARSON": "සම්බන්ධතා පුද්ගල විස්තර",
+    "SUB_TITLE_CONTACT_PEARSON": "සම්බන්ධතා පුද්ගල විස්තර කළමනාකරණය",
+    "TITLE_CART_CONTACT_PEARSON": "සම්බන්ධතා පුද්ගල ලැයිස්තුව",
+    "TITLE_TAX": "බදු විස්තර",
+    "SUB_TITLE_TAX": "බදු විස්තර කළමනාකරණය",
+    "TITLE_CART_TAX": "බදු විස්තර ලැයිස්තුව",
+    "TITLE_BRANCH": "ශාඛා විස්තර",
+    "SUB_TITLE_BRANCH": "ශාඛා විස්තර කළමනාකරණය",
+    "TITLE_CART_BRANCH": "ශාඛා ලැයිස්තුව",
+    "TITLE_ACCOUNT": "ගිණුම් විස්තර",
+    "SUB_TITLE_ACCOUNT": "ගිණුම් විස්තර කළමනාකරණය ",
+    "TITLE_CART_ACCOUNT": "ගිණුම් විස්තර ලැයිස්තුව",
+    "TITLE_CREDIT_APPROVAL": "ණය අනුමත කිරීමේ විස්තර",
+    "SUB_TITLE_CREDIT_APPROVAL": "ණය අනුමත කිරීමේ විස්තර කළමනාකරණය",
+    "TITLE_PRODUCT_CATEGORY_ITEM_DETAILS": "අයිතම විස්තර",
+    "TITLE_PRODUCT_CATEGORY_ITEM": "අයිතම",
+    "TABLE_TITLE": "Customer",
+    "TABLE_HEADER_1": "Select",
+    "TABLE_HEADER_2": "Name",
+    "TABLE_HEADER_3": "Created Date",
+    "TABLE_HEADER_4": "Created By",
+    "FORM_PERSONAL_DETAILS_TITLE_1": "නම",
+    "FORM_PERSONAL_DETAILS_TITLE_2": "BR/NIC අංකය",
+    "FORM_PERSONAL_DETAILS_TITLE_3": "සම්බන්ධතා අංකය",
+    "FORM_PERSONAL_DETAILS_TITLE_4": "ෆැක්ස්",
+    "FORM_PERSONAL_DETAILS_TITLE_5": "විද්යුත් තැපෑල",
+    "FORM_PERSONAL_DETAILS_TITLE_6": "නගරය",
+    "FORM_PERSONAL_DETAILS_TITLE_7": "මාර්ගය",
+    "FORM_PERSONAL_DETAILS_TITLE_8": "ලිපින පේළි 1",
+    "FORM_PERSONAL_DETAILS_TITLE_9": "ලිපින පේළි 2",
+    "FORM_PERSONAL_DETAILS_TITLE_10": "ලිපින පේළි 3",
+    "FORM_PERSONAL_DETAILS_TITLE_11": "ණය පාරිභෝගිකයා",
+    "FORM_PERSONAL_DETAILS_TITLE_12": "සියලුම ප්‍රවර්ගයට ඉඩ දෙන්න",
+    "FORM_PERSONAL_DETAILS_TITLE_13": "බදු පාරිභෝගිකයා",
+    "FORM_PERSONAL_DETAILS_TITLE_14": "BR රූපය",
+    "FORM_PERSONAL_DETAILS_TITLE_15": "සාප්පු රූපය 1",
+    "FORM_PERSONAL_DETAILS_TITLE_16": "සාප්පු රූපය 2",
+    "FORM_PERSONAL_DETAILS_TITLE_17": "සාප්පු රූපය 3",
+    "FORM_REP_DETAILS_TITLE_1": "නම",
+    "TABLE_REP_HEADER_1": "ඉවත් කරන්න    ",
+    "TABLE_REP_HEADER_2": "නම",
+    "TABLE_REP_HEADER_3": "සම්බන්ධතා අංකය",
+    "FORM_OWNER_DETAILS_TITLE_1": "නම",
+    "FORM_OWNER_DETAILS_TITLE_2": "ජාතික හැඳුනුම්පත් අංකය",
+    "FORM_OWNER_DETAILS_TITLE_3": "ඇමතුම් අංකය",
+    "FORM_OWNER_DETAILS_TITLE_4": "ලිපින පේළි 1",
+    "FORM_OWNER_DETAILS_TITLE_5": "ලිපින පේළි 2",
+    "FORM_OWNER_DETAILS_TITLE_6": "ලිපින පේළි 3",
+    "TABLE_OWNER_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_OWNER_HEADER_2": "නම",
+    "TABLE_OWNER_HEADER_3": "ජාතික හැඳුනුම්පත් අංකය",
+    "TABLE_OWNER_HEADER_4": "සම්බන්ධතා අංකය",
+    "FORM_CONTACT_DETAILS_TITLE_1": "නම",
+    "FORM_CONTACT_DETAILS_TITLE_2": "තනතුර",
+    "FORM_CONTACT_DETAILS_TITLE_3": "සම්බන්ධතා අංකය",
+    "TABLE_CONTACT_DETAILS_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_CONTACT_DETAILS_HEADER_2": "නම",
+    "TABLE_CONTACT_DETAILS_HEADER_3": "තනතුර",
+    "TABLE_CONTACT_DETAILS_HEADER_4": "සම්බන්ධතා අංකය",
+    "FORM_TAX_TITLE_1": "බදු වර්ගය",
+    "FORM_TAX_TITLE_2": "බදු අංකය",
+    "TABLE_TAX_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_TAX_HEADER_2": "බදු වර්ගය",
+    "TABLE_TAX_HEADER_3": "බදු අංකය",
+    "FORM_BRANCH_DETAILS_TITLE_1": "නම",
+    "FORM_BRANCH_DETAILS_TITLE_2": "සම්බන්ධතා අංක 1",
+    "FORM_BRANCH_DETAILS_TITLE_3": "සම්බන්ධතා අංක 2",
+    "FORM_BRANCH_DETAILS_TITLE_4": "විද්යුත් තැපෑල",
+    "FORM_BRANCH_DETAILS_TITLE_5": "ලිපින පේළි 1",
+    "FORM_BRANCH_DETAILS_TITLE_6": "ලිපින පේළි 2",
+    "FORM_BRANCH_DETAILS_TITLE_7": "ලිපින පේළි 3",
+    "FORM_BRANCH_DETAILS_TITLE_8": "ඇමතිය යුතු පුද්ගලයා",
+    "TABLE_BRANCH_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_BRANCH_HEADER_2": "නම",
+    "TABLE_BRANCH_HEADER_3": "සම්බන්ධතා අංකය",
+    "FORM_ACCOUNT_TITLE_1": "බැංකුව",
+    "FORM_ACCOUNT_TITLE_2": "ශාඛාව",
+    "FORM_ACCOUNT_TITLE_3": "ගිණුමේ නම",
+    "FORM_ACCOUNT_TITLE_4": "ගිණුම් අංකය",
+    "TABLE_ACCOUNT_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_ACCOUNT_HEADER_2": "බැංකුව",
+    "TABLE_ACCOUNT_HEADER_3": "ශාඛාව",
+    "TABLE_ACCOUNT_HEADER_4": "ගිණුමේ නම",
+    "TABLE_ACCOUNT_HEADER_5": "ගිණුම් අංකය",
+    "FORM_CREDIT_APPROVAL_TITLE_1": "ඉල්ලුම්කල මුළු ණය සීමාව",
+    "FORM_CREDIT_APPROVAL_TITLE_2": "ඉල්ලුම්කල මුළු ණය දින",
+    "FORM_CREDIT_APPROVAL_TITLE_3": "ඉල්ලුම්කල WPD ණය සීමාව",
+    "FORM_CREDIT_APPROVAL_TITLE_4": "ඉල්ලුම්කල WPD ණය දින",
+    "FORM_PRODUCT_CATEGORIES_TITLE_1": "අයිතම කාණ්ඩය",
+    "FORM_REP_TITLE_1": "විකුණුම් නියෝජිත",
+    "FORM_PRODUCT_CATEGORY_DETAILS_TITLE_1": "නම",
+    "FORM_PRODUCT_CATEGORY_TITLE_2": "අයිතම උප කාණ්ඩය",
+    "TABLE_PRODUCT_CATEGORY_1": "තෝරන්න",
+    "TABLE_PRODUCT_CATEGORY_2": "අයිතම",
+    "BUTTON_NEXT": "ඊළඟ",
+    "BUTTON_BACK": "ආපසු",
+    "BUTTON_SAVE": "සුරකින්න"
+  },
+  "CUSTOMER_SPECIAL_PRICE": {
+    "ERROR_DUPLICATE": "Store Type name is already exists",
+    "ERROR_KEY_CONSTRAINT": "You cannot do this becase store type data already used",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "පාරිභෝගික විශේෂ මිල"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "පාරිභෝගික විශේෂ මිල කළමනාකරණය",
+    "TITLE": "පාරිභෝගික විශේෂ මිල",
+    "SUB_TITLE": "පාරිභෝගික විශේෂ මිල ගණන් කළමනාකරණය",
+    "TABLE_SELECT_ITEMS_TITLE": "කරුණාකර අයිතම තෝරන්න",
+    "TABLE_SELECT_ITEMS_HEADER_1": "අයිතමය",
+    "TABLE_SELECT_ITEMS_HEADER_2": "පවතින මිල",
+    "TABLE_SELECT_ITEMS_HEADER_3": "විශේෂ මිල",
+    "TABLE_SELECTED_ITEMS_TITLE": "තෝරාගත් අයිතම",
+    "TABLE_SELECTED_ITEMS_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_SELECTED_ITEMS_HEADER_2": "දින පරාසය වෙනස් කරන්න",
+    "TABLE_SELECTED_ITEMS_HEADER_3": "අයිතමය",
+    "TABLE_SELECTED_ITEMS_HEADER_4": "පවතින මිල",
+    "TABLE_SELECTED_ITEMS_HEADER_5": "විශේෂ මිල",
+    "TABLE_SELECTED_ITEMS_HEADER_6": "ආරම්භක දිනය",
+    "TABLE_SELECTED_ITEMS_HEADER_7": "අවසාන දිනය",
+    "FORM_TITLE_1": "පාරිභෝගිකයා",
+    "FORM_TITLE_2": "ආරම්භක දිනය",
+    "FORM_TITLE_3": "අවසාන දිනය"
+  },
+  "CUSTOMER_SPECIAL_DISCOUNT": {
+    "ERROR_DUPLICATE": "Store Type name is already exists",
+    "ERROR_KEY_CONSTRAINT": "You cannot do this becase store type data already used",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "පාරිභෝගික විශේෂ වට්ටම්"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "පාරිභෝගික විශේෂ වට්ටම් කළමනාකරණය",
+    "TITLE": "පාරිභෝගික විශේෂ වට්ටම්",
+    "SUB_TITLE": "පාරිභෝගික විශේෂ වට්ටම් කළමනාකරණය",
+    "TABLE_SELECT_ITEMS_TITLE": "කරුණාකර අයිතම තෝරන්න",
+    "TABLE_SELECT_ITEMS_HEADER_1": "අයිතමය",
+    "TABLE_SELECT_ITEMS_HEADER_2": "පවතින මිල",
+    "TABLE_SELECT_ITEMS_HEADER_3": "විශේෂ වට්ටම%",
+    "TABLE_SELECTED_ITEMS_TITLE": "තෝරාගත් අයිතම",
+    "TABLE_SELECTED_ITEMS_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_SELECTED_ITEMS_HEADER_2": "දින පරාසය වෙනස් කරන්න",
+    "TABLE_SELECTED_ITEMS_HEADER_3": "අයිතමය",
+    "TABLE_SELECTED_ITEMS_HEADER_4": "පවතින මිල",
+    "TABLE_SELECTED_ITEMS_HEADER_5": "විශේෂ වට්ටම%",
+    "TABLE_SELECTED_ITEMS_HEADER_6": "විශේෂ වට්ටම් සහිත මිල",
+    "TABLE_SELECTED_ITEMS_HEADER_7": "ආරම්භක දිනය",
+    "TABLE_SELECTED_ITEMS_HEADER_8": "අවසාන දිනය",
+    "FORM_TITLE_1": "පාරිභෝගිකයා",
+    "FORM_TITLE_2": "ආරම්භක දිනය",
+    "FORM_TITLE_3": "අවසාන දිනය"
+  },
+  "SALES_PERSON_MONTHLY_TARGETS": {
+    "ERROR_DUPLICATE": "මාසික ඉලක්කය දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "මාසික ඉලක්කය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "මාසික ඉලක්කය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "මාසික ඉලක්කය කළමනාකරණය",
+    "TITLE": "මාසික ඉලක්කය",
+    "SUB_TITLE": "මාසික ඉලක්ක කළමනාකරණය",
+    "TABLE_TITLE": "මාසික ඉලක්ක",
+    "TABLE_HEADER_1": "තෝරන්න",
+    "TABLE_HEADER_2": "විකුණුම්කරු",
+    "TABLE_HEADER_3": "වර්ෂය",
+    "TABLE_HEADER_4": "මාසය",
+    "TABLE_HEADER_5": "මුදල් එකතුව%",
+    "TABLE_HEADER_6": "චෙක්පත් එකතුව%",
+    "TABLE_HEADER_7": "එකතු කිරීමේ ඉලක්කය",
+    "TABLE_HEADER_8": "විකුණුම් ඉලක්කය",
+    "FORM_TITLE_1": "විකුණුම්කරු",
+    "FORM_TITLE_2": "වර්ෂය",
+    "FORM_TITLE_3": "මාසය",
+    "FORM_TITLE_4": "මුදල් එකතුව%",
+    "FORM_TITLE_5": "චෙක්පත් එකතුව%",
+    "FORM_TITLE_6": "එකතු කිරීමේ ඉලක්කය",
+    "FORM_TITLE_7": "විකුණුම් ඉලක්කය"
+  },
+  "SALES_PERSONS_CUSTOMER_MONTHLY_TARGETS": {
+    "ERROR_DUPLICATE": "පාරිභෝගික මාසික ඉලක්කය දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "පාරිභෝගික මාසික ඉලක්කය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "ERROR_INVALID_ASSIGNED_TARGET": "පවරන ලද ඉලක්කය වලංගු නොවේ",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "පාරිභෝගික මාසික ඉලක්කය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "පාරිභෝගික මාසික ඉලක්කය කළමනාකරණය",
+    "TITLE": "පාරිභෝගික මාසික ඉලක්කය",
+    "SUB_TITLE": "පාරිභෝගික මාසික ඉලක්ක කළමනාකරණය",
+    "TABLE_TITLE": "පාරිභෝගික මාසික ඉලක්ක",
+    "TABLE_HEADER_1": "පාරිභෝගිකයා",
+    "TABLE_HEADER_2": "නගරය",
+    "TABLE_HEADER_3": "මුදල",
+    "FORM_TITLE_1": "විකුණුම්කරු",
+    "FORM_TITLE_2": "වර්ෂය",
+    "FORM_TITLE_3": "මාසය",
+    "FORM_TITLE_4": "අවශ්‍ය ඉලක්කය",
+    "FORM_TITLE_5": "පවරන ලද ඉලක්කය",
+    "FORM_TITLE_6": "ඉතිරි ඉලක්කය"
+  },
+  "SALES_PERSONS_ITEM_MONTHLY_TARGETS": {
+    "ERROR_DUPLICATE": "අයිතම අනුව මාසික ඉලක්කය දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "අයිතම අනුව මාසික ඉලක්කය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "ERROR_INVALID_ASSIGNED_TARGET": "පවරන ලද ඉලක්කය වලංගු නොවේ",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "අයිතම අනුව මාසික ඉලක්කය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "අයිතම අනුව මාසික ඉලක්කය කළමනාකරණය",
+    "TITLE": "අයිතම අනුව මාසික ඉලක්කය",
+    "SUB_TITLE": "අයිතම අනුව මාසික ඉලක්ක කළමනාකරණය",
+    "TABLE_TITLE_1": "අයිතමය තෝරන්න",
+    "TABLE_TITLE_2": "තෝරාගත් අයිතම",
+    "TABLE_HEADER_1": "අයිතමය",
+    "TABLE_HEADER_2": "ඇසුරුම් ප්‍රමාණය",
+    "TABLE_HEADER_3": "භාණ්ඩ වට්ටම්",
+    "TABLE_HEADER_4": "උපරිම සිල්ලර මිල",
+    "TABLE_HEADER_5": "ප්‍රමාණය",
+    "FORM_TITLE_1": "වර්ෂය",
+    "FORM_TITLE_2": "මාසය",
+    "FORM_TITLE_3": "විකුණුම්කරු",
+    "FORM_TITLE_4": "පාරිභෝගිකයා",
+    "FORM_TITLE_5": "ඉලක්කගත මුදල",
+    "FORM_TITLE_6": "උපරිම සිල්ලර මිල",
+    "FORM_TITLE_7": "සම්පූර්ණ විකුණුම් වට්ටම් මුදල",
+    "FORM_TITLE_8": "ශුද්ධ මුදල"
+  },
+  "SALES_PERSONS_ITEM_MONTHLY_TARGETS_EDIT": {
+    "ERROR_DUPLICATE": "අයිතම අනුව මාසික ඉලක්කය දැනටමත් පවතී",
+    "ERROR_KEY_CONSTRAINT": "අයිතම අනුව මාසික ඉලක්කය දැනටමත් භාවිතා කර ඇති නිසා ඔබට මෙය කළ නොහැක",
+    "ERROR_INVALID_ASSIGNED_TARGET": "පවරන ලද ඉලක්කය වලංගු නොවේ",
+    "BREAD_CRUMB": [
+      {
+        "label": "සැකසුම් මොඩියුලය"
+      },
+      {
+        "label": "අයිතම අනුව මාසික ඉලක්කය  සංස්කරණය"
+      }
+    ],
+    "BREAD_CRUMB_TITLE": "අයිතම අනුව මාසික ඉලක්කය කළමනාකරණය",
+    "TITLE": "අයිතම අනුව මාසික ඉලක්කය",
+    "SUB_TITLE": "අයිතම අනුව මාසික ඉලක්ක කළමනාකරණය",
+    "TABLE_TITLE_1": "අයිතමය තෝරන්න",
+    "TABLE_TITLE_2": "තෝරාගත් අයිතම",
+    "TABLE_HEADER_1": "ඉවත් කරන්න",
+    "TABLE_HEADER_2": "අයිතමය",
+    "TABLE_HEADER_3": "ඇසුරුම් ප්‍රමාණය",
+    "TABLE_HEADER_4": "භාණ්ඩ වට්ටම්",
+    "TABLE_HEADER_5": "උපරිම සිල්ලර මිල",
+    "TABLE_HEADER_6": "ප්‍රමාණය",
+    "FORM_TITLE_1": "වර්ෂය",
+    "FORM_TITLE_2": "මාසය",
+    "FORM_TITLE_3": "විකුණුම්කරු",
+    "FORM_TITLE_4": "පාරිභෝගිකයා",
+    "FORM_TITLE_5": "ඉලක්කගත මුදල",
+    "FORM_TITLE_6": "උපරිම සිල්ලර මිල",
+    "FORM_TITLE_7": "සම්පූර්ණ විකුණුම් වට්ටම් මුදල",
+    "FORM_TITLE_8": "ශුද්ධ මුදල"
+  }
+}

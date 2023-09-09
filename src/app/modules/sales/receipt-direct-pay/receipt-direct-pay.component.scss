@@ -1,0 +1,30 @@
+@import "../../../../colors.scss";
+
+.content-card-custom {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 20px;
+  min-height: 150px;
+  margin: 20px 5px;
+}
+
+.btn-primary
+{
+  width: 100px;
+  background-color:#14212e;
+ 
+
+  span{
+    color: white;
+  }
+}
+
+.error-config{
+  margin-top: -23px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix{
+  padding-top: 12px !important;
+}
+::ng-deep .mat-mdc-text-field-wrapper{
+  height: 46px !important;
+}

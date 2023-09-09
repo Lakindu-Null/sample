@@ -1,0 +1,109 @@
+
+.jspacer {
+    flex: 1 1 auto;
+}
+
+.close-dialog-box-btn {
+    cursor: pointer;
+}
+
+mat-toolbar {
+    background-color: transparent;
+
+}
+
+.tootbar-text
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+.tab-content {
+    padding: 15px;
+    min-height: 50vh;
+    overflow-y: scroll;
+    max-height: 55vh;
+}
+
+.img-thumbnail {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.grid-box {
+    position: relative;
+}
+
+.image-check {
+    background-color: white;
+    box-shadow: none;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    border-radius: 0px 0px 0px 10px;
+}
+
+.button-row {
+    display: table-cell;
+}
+
+
+
+.confirm-btn {
+    //box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgb(60, 17, 80);
+    margin-right: 5px;
+    span{
+        color:white;
+    }
+}
+
+.remove-btn {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: red;
+    padding-right: 5px;
+    span{
+        color:white;
+    }
+}
+
+.confirm-btn:hover,
+.remove-btn:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.file-uploader-loading-text {
+    position: absolute;
+    display: block;
+    top: 52%;
+}
+
+.upload-ubtn {
+    margin-top: 10px;
+    width: 60%;
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+}
+
+.uploader-content {
+    position: absolute;
+    display: block;
+    top: 30%;
+    left: 35%;
+}
+
+.clear-selcted {
+    cursor: pointer;
+}
+
+.selected-image-content {
+    padding-top: 100px;
+}
+
+.selected-image {
+    width: 75px;
+    height: 75px;
+}

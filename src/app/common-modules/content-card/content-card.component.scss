@@ -1,0 +1,95 @@
+@import '../.../../../../common';
+
+.content-card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    min-height: 250px;
+    margin: 20px 5px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar {
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+    .toolbar__header {
+        font-size: 21px;
+        font-weight: 700;
+        color: #2D2D2D;
+        margin: 3px 0px 0px 7px;        
+        line-height: 100%;
+    }
+
+    .toolbar__para {
+        margin-left: 7px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .toolbar__icon {
+        border: none;
+        border-radius: 10px;
+        padding: 7px 13px;
+        margin: 0px 0px 0px 9px;
+        font-weight: 700;
+
+        color: rgb(0, 0, 0);
+        background-color: #EFF2F5;
+    }
+
+    .toolbar__icon:hover {
+        color: rgb(255, 255, 255);
+        background-color: #000000;
+        transition: 500ms;
+    }
+
+}
+
+.table-wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+.stat-profit {
+    background-color: #e1fcd9;
+    color: #4deb25;
+    padding: 3px 12px;
+    border-radius: 10px;
+}
+
+.txt-wrapper {
+    width: 93%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.input-sub-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-style {
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 5px !important;
+    color: black;
+    outline: 0;
+    padding: 10px 10px 10px 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn__primary__config {
+    width: 30%;
+}

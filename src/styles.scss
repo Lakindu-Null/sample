@@ -1,0 +1,330 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$Uniro-SaaS-Project-primary: mat.define-palette(mat.$green-palette, A700, A700, A700);
+$Uniro-SaaS-Project-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$Uniro-SaaS-Project-warn: mat.define-palette(mat.$red-palette);
+
+$Uniro-SaaS-Project-theme: mat.define-light-theme((
+  color: (
+    primary: $Uniro-SaaS-Project-primary,
+    accent: $Uniro-SaaS-Project-accent,
+    warn: $Uniro-SaaS-Project-warn,
+  )
+));
+
+@include mat.all-component-themes($Uniro-SaaS-Project-theme);
+
+@import './common';
+@import './animation';
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Varela+Round&display=swap');
+
+/* PRIMENG STYLES */
+@import "./lara-light-theme.css";
+@import "primeng/resources/primeng.css";
+
+/* COLORS */
+@import "./colors.scss";
+
+/* MAIN STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+/* COMMON STYLES */
+.flex-gap-container {
+    display: flex;
+    gap: 8px;
+}
+
+.p-colorpicker-preview,
+.p-fluid .p-colorpicker-preview.p-inputtext {
+    width: 42px !important;
+    height: 42px !important;
+}
+
+.p-calendar {
+    width: 100% !important;
+}
+
+.p-dropdown-panel .p-dropdown-header{
+    background: $white !important;
+}
+
+/* CARD STYLES */
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    background-color: #fff;
+    margin: 1.25rem 0 1.25rem 0;
+    box-shadow: 0 .25rem .5rem #e6edef;
+
+    .card-head {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #edf1f7;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .card-body {
+        padding: 1rem 1.5rem;
+    }
+}
+
+/* INPUT STYLES */
+.input-wrapper {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .label {
+        font-size: 14px;
+    }
+
+    .input-style-1 {
+        padding: 14px;
+        border-radius: 10px;
+        width: 100%;
+        min-width: 350px;
+        border: 1px solid $border-color;
+        font-size: 16px;
+    }
+}
+
+/* BUTTON STYLES */
+.button-style-1 {
+    cursor: pointer;
+    width: 100%;
+    background-color: $button-black;
+    color: $button-white;
+    height: 56px;
+    border-radius: 12px;
+    font-size: 16px;
+    border: none;
+}
+
+.remove-btn{
+    background-color: $button-red-background-1;
+    border: none;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+
+    i{
+        color: $text-red-1;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.print-btn{
+    background-color: $green-theme-colors-active;
+    border: none;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+
+    i{
+        color: $green-theme-colors-light;
+        font-size: 18px;
+        font-weight: 500 !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .input-style-1 {
+        min-width: auto !important;
+    }
+}
+
+/* TOOLTIP STYLES */
+.p-tooltip {
+    color: $white !important;
+    margin-left: 8px !important;
+}
+
+.p-tooltip-text {
+    background-color: $tooltip-background !important;
+    box-shadow: 2px 2px 4px #00000040 !important;
+}
+
+.p-tooltip-arrow {
+    display: none !important;
+}
+
+/* BREADCRUMB STYLES */
+.breadcrumbs {
+    color: $text-color-5;
+    margin-bottom: 0 !important;
+}
+
+/* PAGE HEADER STYLES */
+.header {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-bottom: 0px !important;
+}
+
+/* INPUT ERROR STYLE */
+.error-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: $button-red;
+}
+
+/* FORM CARD STYLE */
+.insert-form-card {
+    .card-header {
+        background-color: $green-theme-colors-light;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        border-radius: 10px 10px 0 0 !important;
+        margin-top: 24px;
+        height: 57px;
+
+        .header {
+            color: $white;
+            padding: 4px 8px;
+            font-size: 22px !important;
+            font-weight: 500 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .icon-wapper {
+            display: flex;
+            gap: 10px;
+
+            .icon-button {
+                border-radius: 8px;
+                padding: 8px;
+                border: none;
+                background-color: $white;
+                cursor: pointer;
+            }
+
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 26px;
+                width: 26px;
+                font-size: 20px;
+                font-weight: 400;
+                color: $text-color-4;
+            }
+        }
+    }
+
+    .card-body {
+        padding: 28px 18px;
+        border: 1px solid $hr-color;
+        border-radius: 0 0 10px 10px;
+
+        .wapper {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+        }
+
+        .input-wapper {
+            display: flex;
+            gap: 24px;
+
+            .input-text {
+                border-radius: 8px !important;
+                width: 100%;
+            }
+
+            .input-text::placeholder {
+                color: $placeholder-color;
+            }
+        }
+    }
+}
+
+/* TABLE CARD STYLE */
+.view-table-card {
+    margin-top: 48px;
+
+    .table-border {
+        border-left: 1px solid $hr-color;
+        border-right: 1px solid $hr-color;
+    }
+
+    .card-header {
+        height: 57px;
+
+        th {
+            color: $white !important;
+            font-weight: 500 !important;
+            font-size: 15px !important;
+        }
+
+        .left-th {
+            border-radius: 10px 0 0 0;
+        }
+
+        .right-th {
+            border-radius: 0 10px 0 0;
+        }
+    }
+
+    .card-body {
+        td {
+            font-size: 14px !important;
+        }
+    }
+
+    .p-datatable .p-datatable-header {
+        background: white !important;
+        border: none !important;
+        padding: 1rem !important;
+    }
+
+    .card-filter {
+        display: flex !important;
+        justify-content: flex-end !important;
+
+        i {
+            font-size: 15px !important;
+        }
+
+        .filter {
+            height: 35px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+    }
+
+    .p-paginator {
+        justify-content: flex-end !important;
+        border-left: 1px solid $hr-color !important;
+        border-right: 1px solid $hr-color !important;
+        border-radius: 0px 0px 10px 10px !important;
+    }
+}

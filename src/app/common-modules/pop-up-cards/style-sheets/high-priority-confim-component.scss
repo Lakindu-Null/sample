@@ -1,0 +1,70 @@
+@import "../../../../colors.scss";
+
+
+.dialog-wapper{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+
+    .header{
+        font-size: 24px;
+        margin-bottom: 6px !important;
+    }
+    
+    .message{
+        color: $paragraph-color;
+        margin-bottom: 6px !important;
+    }
+
+    .warning{
+        color: $text-red-1;
+        margin-bottom: 24px !important;
+    }
+
+    .confirm{
+        color: $paragraph-color;
+        margin-bottom: 18px !important;
+    }
+
+    .message, .warning, .confirm{
+        font-size: 14px;
+        max-width: 285px;
+        line-height: 1;
+    }
+}
+
+.confirm-input{
+    border-radius: 10px !important;
+}
+
+.button-wapper{
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+
+    button{
+        width: 136px;
+        height: 42px;
+        border-radius: 8px;
+        border: none;
+
+        h4{
+            font-size: 14px;
+            font-weight: 600 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .cancel-btn{
+        background-color: $button-close-background;
+        h4{
+            color: $black;
+        }
+    }
+    .delete-btn{
+        background-color: $text-red-1;
+        h4{
+            color: $white;
+        }
+    }
+}

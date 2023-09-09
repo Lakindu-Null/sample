@@ -1,0 +1,610 @@
+<!-- <section class="content-header" *ngIf="!isLoading">
+    <h3>
+        {{'RECEIPT.BREAD_CRUMB_TITLE'| translate }}
+        <small>{{'COMMON.BREAD_CRUMB_SUB_TITLE'| translate }}</small>
+    </h3>
+    <p-breadcrumb [model]="items" [home]="home" [style]="{ background: 'none', border: 'none' }"></p-breadcrumb>
+</section> -->
+
+<!-- <section class="container-fluid page-scroller" [hidden]="isLoading">
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="content-card-custom">
+
+                <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                    <div class="column">
+                        <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                            {{'RECEIPT.TITLE'|
+                            translate }}</p>
+                        <p class="toolbar__para para-style" [ngStyle]="{'color': theme.toolBarSubHeaderColor}">
+                            {{'RECEIPT.SUB_TITLE'| translate}}</p>
+                    </div>
+
+                    <span class="toolbar-spacer"></span>
+
+                    <div class="tool-bar-btn-group">
+                        <button class="toolbar__icon right_corner" matTooltip="{{'COMMON.CLEAR_TOOLTIP'| translate}}"
+                            (click)="clearData()" [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                            <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">add</mat-icon>
+                        </button>
+                    </div>
+
+                </mat-toolbar>
+
+                <div class="txt-wrapper">
+                    <form [formGroup]="dataForm">
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <label class="label-config">{{'RECEIPT.FORM_TITLE_1'| translate }}</label>
+                                <p-dropdown [options]="allCustomers" optionLabel="name" optionValue="id" [filter]="true"
+                                    [style]="{'width':'100%','height':'45px','margin-bottom': '10px'}"
+                                    formControlName="customerId" [(ngModel)]="cusId"
+                                    (ngModelChange)="customerChange($event)">
+                                </p-dropdown>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM_TITLE_2'| translate }}</label>
+                                <input type="number" class="input-style input-config-1" placeholder="outstanding"
+                                    readonly pInputText formControlName="outstanding">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM_TITLE_6'| translate }}</label>
+                                <input type="number" class="input-style input-config-1" placeholder="allOverPayments"
+                                    readonly pInputText formControlName="allOverPayments">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM_TITLE_7'| translate }}</label>
+                                <input type="number" class="input-style input-config-1" placeholder="Pay By OverPayment"
+                                    pInputText formControlName="payOverPayment" (keyup)="opChange()">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM_TITLE_3'| translate }}</label>
+                                <input type="number" class="input-style input-config-1" placeholder="Cash" pInputText
+                                    formControlName="cash" (keyup)="cashAmountChange($event)">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM_TITLE_5'| translate }}</label>
+                                <p-dropdown [options]="chequeOptions" optionLabel="name" optionValue="id"
+                                    [filter]="true" [style]="{'width':'100%','height':'45px','margin-bottom': '10px'}"
+                                    formControlName="chequeEnable" [(ngModel)]="chequeEnable">
+                                </p-dropdown>
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM_TITLE_4'| translate }}</label>
+                                <input type="number" class="input-style input-config-1" readonly placeholder="Cheque"
+                                    pInputText formControlName="cheque">
+                            </div>
+
+
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="content-card" *ngIf="chequeEnable=='yes'">
+                <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                    <div class="column">
+                        <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                            {{'RECEIPT.TABLE_TITLE'| translate}}</p>
+                    </div>
+                    <span class="toolbar-spacer"></span>
+                    <div class="tool-bar-btn-group">
+
+                        <button class="toolbar__icon right_corner" matTooltip="{{'COMMON.CLEAR_TOOLTIP'| translate}}"
+                            [disabled]="!chequeForm.valid" (click)="addTocartData()"
+                            [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                            <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">shopping_cart</mat-icon>
+                        </button>
+
+
+                    </div>
+                </mat-toolbar>
+
+                <div class="txt-wrapper">
+                    <form [formGroup]="chequeForm">
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM2_TITLE_1'| translate }}</label>
+                                <input type="text" class="input-style input-config-1" placeholder="Bank" pInputText
+                                    formControlName="bank">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM2_TITLE_2'| translate }}</label>
+                                <input type="text" class="input-style input-config-1" placeholder="Branch" pInputText
+                                    formControlName="branch">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM2_TITLE_3'| translate }}</label>
+                                <input type="number" class="input-style input-config-1" placeholder="Acount number"
+                                    pInputText formControlName="acountNumber">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM2_TITLE_4'| translate }}</label>
+                                <input type="number" class="input-style input-config-1" placeholder="Cheque Number"
+                                    pInputText formControlName="chequeNo">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM2_TITLE_5'| translate }}</label>
+                                <input type="date" class="input-style input-config-1" placeholder="Cheque Date"
+                                    pInputText formControlName="chequeDate">
+                            </div>
+
+                            <div class="col-md-2">
+                                <label class="label-config">{{'RECEIPT.FORM2_TITLE_6'| translate }}</label>
+                                <input type="number" class="input-style input-config-1" placeholder="Amount" pInputText
+                                    formControlName="amount">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="table-wrapper">
+                    <div class="table">
+                        <mat-table #table [dataSource]="dataSource">
+
+                            <ng-container matColumnDef="delete">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE_HEADER_1'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    <button mat-icon-button color="primary" (click)="removeData(element)">
+                                        <mat-icon>remove</mat-icon>
+                                    </button>
+                                </mat-cell>
+                            </ng-container>
+
+                            <ng-container matColumnDef="bank">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE_HEADER_2'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    {{element.bank}}
+                                </mat-cell>
+                            </ng-container>
+
+                            <ng-container matColumnDef="branch">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE_HEADER_3'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    {{element.branch}}
+                                </mat-cell>
+                            </ng-container>
+
+                            <ng-container matColumnDef="acountNumber">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE_HEADER_4'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    {{element.acountNumber}}
+                                </mat-cell>
+                            </ng-container>
+
+                            <ng-container matColumnDef="chequeNo">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE_HEADER_5'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    {{element.chequeNo}}
+                                </mat-cell>
+                            </ng-container>
+
+
+                            <ng-container matColumnDef="chequeDate">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE_HEADER_6'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    {{element.chequeDate}}
+                                </mat-cell>
+                            </ng-container>
+
+                            <ng-container matColumnDef="amount">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE_HEADER_7'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    {{element.amount}}
+                                </mat-cell>
+                            </ng-container>
+
+                            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                        </mat-table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="content-card">
+                <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                    <div class="column">
+                        <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                            {{'RECEIPT.TABLE_TITLE2'| translate}}</p>
+                    </div>
+                    <span class="toolbar-spacer"></span>
+                    <span class="p-input-icon-right">
+                        <i class="pi pi-search"></i>
+                        <input type="text" class="input-style input-config-1 table-search-box"
+                            placeholder="{{'COMMON.SEARCH_TITLE'| translate }}" pInputText
+                            (keyup)="tableFilter($event)">
+                    </span>
+                </mat-toolbar>
+                <div class="table-wrapper">
+                    <div class="table">
+                        <mat-table #table [dataSource]="dataSource2">
+
+                            <ng-container matColumnDef="invoicehGenId">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE2_HEADER_1'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    {{element.invoicehGenId}}
+                                </mat-cell>
+                            </ng-container>
+
+                            <ng-container matColumnDef="amount">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE2_HEADER_2'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    {{element.amount.toFixed(2)}}
+
+                                </mat-cell>
+                            </ng-container>
+
+                            <ng-container matColumnDef="balance">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE2_HEADER_3'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+                                    <span>
+                                        <font color="red"> {{element.balance.toFixed(2)}}</font>
+                                    </span>
+                                </mat-cell>
+                            </ng-container>
+
+                            <ng-container matColumnDef="payment">
+                                <mat-header-cell *matHeaderCellDef>{{'RECEIPT.TABLE2_HEADER_4'|
+                                    translate}}</mat-header-cell>
+                                <mat-cell *matCellDef="let element">
+
+                                    <input type="number" class="input-style input-config-1" pInputText
+                                        [ngModelOptions]="{standalone: true}" [(ngModel)]="element.payment"
+                                        (ngModelChange)="payAmtChange(element)">
+
+                                </mat-cell>
+                            </ng-container>
+
+                            <mat-header-row *matHeaderRowDef="displayedColumnsOutstanding"></mat-header-row>
+                            <mat-row *matRowDef="let row; columns: displayedColumnsOutstanding;"></mat-row>
+                        </mat-table>
+
+                        <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5,10, 15, 20]"
+                            showFirstLastButtons>
+                        </mat-paginator>
+                        <br>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                <button mat-button class="btn-primary" (click)="saveConfirmation()" style="float: right;"><span>Save</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section> -->
+
+<app-loader *ngIf="isLoading"></app-loader>
+<h2 class="header">Create Receipt</h2>
+<p class="breadcrumbs">sales / create-receipt</p>
+<p-toast></p-toast>
+<!-- RECEIPT FORM -->
+<div class="insert-form-card" [hidden]="isLoading">
+    <!-- FORM HEADER -->
+    <div class="card-header">
+        <h2 class="header">Create Receipt</h2>
+        <div class="icon-wapper">
+
+            <button class="icon-button" pTooltip="Save" tooltipPosition="bottom" (click)="saveConfirmation()">
+                <i class="fal fa-file-contract"></i>
+            </button>
+
+            <button class="icon-button" pTooltip="Clear" tooltipPosition="bottom" (click)="clearData()">
+                <i class="fal fa-eraser"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- FORM BODY -->
+    <form class="card-body" [formGroup]="dataForm">
+        <div class="input-wapper">
+            <div class="wapper">
+                <label for="start-date">Customer</label>
+                <p-dropdown [options]="allCustomers" optionLabel="name" optionValue="id" [filter]="true" class="input-text"
+                    placeholder="Please Select Customer" [style]="{'width':'100%'}" formControlName="customerId" (ngModelChange)="customerChange($event)">
+                </p-dropdown>
+            </div>
+
+            <div class="wapper">
+                <label for="end-date">Outstanding</label>
+                <input class="input-text" type="number" pInputText formControlName="outstanding" placeholder="45000" readonly />
+            </div>
+
+            <div class="wapper">
+                <label for="end-date">Overpayment</label>
+                <input class="input-text" type="number" pInputText formControlName="allOverPayments" placeholder="15000" readonly />
+            </div>
+
+            <div class="wapper">
+                <label for="end-date">Pay By Overpayment</label>
+                <input class="input-text" type="number" pInputText formControlName="payOverPayment" placeholder="5000" (keyup)="opChange()" />
+            </div>
+
+            <div class="wapper">
+                <label for="end-date">Cash</label>
+                <input class="input-text" type="number" pInputText formControlName="cash" (keyup)="cashAmountChange($event)" placeholder="5000" />
+                <div class="error-text" *ngIf="dataForm.get('cash').touched || dataForm.get('cash').dirty">
+                    <div class="d-flex mb-2" *ngIf="dataForm.get('cash').errors?.['required']">Cash is Required</div>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <div class="input-wapper" style="width: 59.5%;">
+            <div class="wapper">
+                <label for="end-date">Cheque Use</label>
+                <p-dropdown [options]="chequeOptions" optionLabel="name" optionValue="id" [filter]="true" class="input-text"
+                    placeholder="No" [style]="{'width':'100%'}" formControlName="chequeEnable" [(ngModel)]="chequeEnable">
+                </p-dropdown>
+            </div>
+
+            <div class="wapper">
+                <label for="end-date">Cheque</label>
+                <input class="input-text" type="number" pInputText formControlName="cheque" placeholder="10000" readonly />
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- CHEQUE LIST FORM -->
+<div class="insert-form-card" *ngIf="!isLoading && chequeEnable=='yes'">
+    <!-- FORM HEADER -->
+    <div class="card-header">
+        <h2 class="header">Bank Details</h2>
+        <div class="icon-wapper">
+            <button class="icon-button" pTooltip="Add To Cart" tooltipPosition="bottom" [disabled]="!chequeForm.valid"
+                (click)="addTocartData()">
+                <i class="fal fa-cart-shopping"></i>
+            </button>
+            <button class="icon-button" pTooltip="Clear" tooltipPosition="bottom" (click)="clearDataBank()">
+                <i class="fal fa-eraser"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- FORM BODY -->
+    <form class="card-body" [formGroup]="chequeForm">
+        <div class="input-wapper">
+            <div class="wapper">
+                <label for="end-date">Bank</label>
+                <mat-form-field class="input-full-width" appearance="outline">
+                    <input type="text" matInput [formControl]="myControl" [(ngModel)]="selectedBank" class="input-text"
+                        placeholder="Sampath" [matAutocomplete]="auto" (ngModelChange)="bankChange()">
+                    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option.name}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+                <div class="error-text error-config" *ngIf="!chequeForm.get('bank').valid">Invalid Bank Name</div>
+                <!-- <div class="error-text error-config" *ngIf="chequeForm.get('bank').touched || chequeForm.get('bank').dirty">
+                    <div class="d-flex mb-2" *ngIf="myControl.errors?.['required']">Bank is Required</div>
+                    <div class="d-flex mb-2" *ngIf="myControl.errors?.['pattern']">Bank can only contain Characters</div>
+                    <div class="d-flex mb-2" *ngIf="myControl.errors?.['maxlength']">Bank Name Can't be more than 20 Characters</div>
+                </div> -->
+                
+                <!-- <label for="start-date">Bank</label>
+                <input type="text" placeholder="Horana" pInputText formControlName="bank">
+                <div class="error-text" *ngIf="chequeForm.get('bank').touched || chequeForm.get('bank').dirty">
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('bank').errors?.['required']">Bank is Required</div>
+                </div> -->
+            </div>
+
+            <div class="wapper">
+                <label for="end-date">Branch</label>
+                <mat-form-field class="input-full-width" appearance="outline">
+                    <input type="text" matInput [formControl]="myControl2" [(ngModel)]="selectedBranch" class="input-text"
+                        placeholder="Kottawa" [matAutocomplete]="auto2" (ngModelChange)="branchChange()">
+                    <mat-autocomplete #auto2="matAutocomplete" [displayWith]="displayFn">
+                        <mat-option *ngFor="let option of filteredOptions2 | async" [value]="option">
+                            {{option.name}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+                <div class="error-text error-config" *ngIf="!chequeForm.get('branch').valid">Invalid Branch Name</div>
+                <!-- <div class="error-text error-config" *ngIf="chequeForm.get('branch').touched || chequeForm.get('branch').dirty">
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('branch').errors?.['required']">Branch is Required</div>
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('branch').errors?.['pattern']">Branch can only contain Characters</div>
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('branch').errors?.['maxlength']">Branch Name Can't be more than 20 Characters</div>
+                </div> -->
+
+                <!-- 
+                <label for="end-date">Branch</label>
+                <input type="text" placeholder="Horana" pInputText formControlName="branch">
+                <div class="error-text" *ngIf="chequeForm.get('branch').touched || chequeForm.get('branch').dirty">
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('branch').errors?.['required']">Branch is Required
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="wapper">
+                <label for="end-date">Account Number</label>
+                <mat-form-field class="input-full-width" appearance="outline">
+                    <input type="text" matInput [formControl]="myControl3" [(ngModel)]="selectedAccount" class="input-text"
+                        placeholder="1200 3050 4000" [matAutocomplete]="auto3" (ngModelChange)="accNoChange()">
+                    <mat-autocomplete #auto3="matAutocomplete" [displayWith]="displayFn">
+                        <mat-option *ngFor="let option of filteredOptions3 | async" [value]="option">
+                            {{option.name}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+                <div class="error-text error-config" *ngIf="!chequeForm.get('acountNumber').valid">Invalid Acount Number</div>
+                <!-- <div class="error-text error-config" *ngIf="chequeForm.get('acountNumber').touched || chequeForm.get('acountNumber').dirty">
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('acountNumber').errors?.['required']">Acount Number is Required</div>
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('acountNumber').errors?.['pattern']">Account number can only contain numbers</div>
+                </div> -->
+
+                <!-- <label for="end-date">Account Number</label>
+                <input type="text" placeholder="120050006580" pInputText formControlName="acountNumber">
+                <div class="error-text"
+                    *ngIf="chequeForm.get('acountNumber').touched || chequeForm.get('acountNumber').dirty">
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('acountNumber').errors?.['required']">Acount Number
+                        is Required</div>
+                </div> -->
+            </div>
+
+            <div class="wapper">
+                <!-- <mat-form-field class="input-full-width" appearance="outline">
+                    <mat-label>Cheque Number</mat-label>
+                    <input type="text" matInput formControlName="chequeNo">
+                </mat-form-field>
+                <div class="error-text" *ngIf="!chequeForm.get('chequeNo').valid">Invalid Cheque Number (6 digit *)</div> -->
+
+                <label for="end-date">Cheque Number</label>
+                <input type="text" placeholder="504000" pInputText formControlName="chequeNo" class="input-text" />
+                <div class="error-text" *ngIf="chequeForm.get('chequeNo').touched || chequeForm.get('chequeNo').dirty">
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('chequeNo').errors?.['required']">Cheque Number is Required</div>
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('chequeNo').errors?.['pattern']">Cheque Number Must be (6 digit *)</div>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <div class="input-wapper" style="width: 49.5%;">
+            <div class="wapper">
+                <label for="end-date">Cheque Date</label>
+                <p-calendar formControlName="chequeDate" [showIcon]="true" placeholder={{placeholderDay}} class="input-text"></p-calendar>
+                <div class="error-text"
+                    *ngIf="chequeForm.get('chequeDate').touched || chequeForm.get('chequeDate').dirty">
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('chequeDate').errors?.['required']">Date is Required
+                    </div>
+                </div>
+            </div>
+
+            <div class="wapper">
+                <label for="end-date">Amount</label>
+                <input type="number" placeholder="5000" pInputText formControlName="amount" class="input-text">
+                <div class="error-text" *ngIf="chequeForm.get('amount').touched || chequeForm.get('amount').dirty">
+                    <div class="d-flex mb-2" *ngIf="chequeForm.get('amount').errors?.['required']">Amount is Required
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- CHEQUE TABLE -->
+<div class="view-table-card" *ngIf="!isLoading && chequeEnable=='yes'">
+    <p-table #dt1 [value]="allData" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['bank', 'branch', 'acountNumber', 'chequeNo', 'chequeDate', 'amount']">
+        <!-- TABLE FILTERS -->
+        <ng-template pTemplate="caption">
+            <div class="flex" class="card-filter">
+                <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="applyFilterGlobal1($event, 'contains')"
+                        placeholder="Filter Data" class="filter" />
+                </span>
+            </div>
+        </ng-template>
+        <!-- TABLE HEADER -->
+        <ng-template pTemplate="header">
+            <tr class="card-header">
+                <th class="left-th">Remove</th>
+                <th>Bank</th>
+                <th>Branch</th>
+                <th>Account number</th>
+                <th>Cheque Number</th>
+                <th>Cheque Date</th>
+                <th class="right-th">Amount</th>
+            </tr>
+        </ng-template>
+
+        <!-- TABLE BODY -->
+        <ng-template pTemplate="body" let-data>
+            <tr class="card-body table-border">
+                <td>
+                    <button (click)="removeData(data)" class="remove-btn">
+                        <i class="fal fa-trash"></i>
+                    </button>
+                </td>
+                <td>{{data.bank}}</td>
+                <td>{{data.branch}}</td>
+                <td>{{data.acountNumber}}</td>
+                <td>{{data.chequeNo}}</td>
+                <td>{{data.chequeDate}}</td>
+                <td>{{data.amount}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
+<!-- OUTSTANdING TABLE -->
+<div class="view-table-card" [hidden]="isLoading">
+    <p-table #dt2 [value]="allOutstanding" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['amount', 'balance']">
+        <!-- TABLE FILTERS -->
+        <ng-template pTemplate="caption">
+            <div class="flex" class="card-filter">
+                <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="applyFilterGlobal2($event, 'contains')"
+                        placeholder="Filter Data" class="filter" />
+                </span>
+            </div>
+        </ng-template>
+        <!-- TABLE HEADER -->
+        <ng-template pTemplate="header">
+            <tr class="card-header">
+                <th class="left-th">Invoice Number</th>
+                <th>Amount</th>
+                <th>Outstanding</th>
+                <th class="right-th">Pay Amount</th>
+            </tr>
+        </ng-template>
+
+        <!-- TABLE BODY -->
+        <ng-template pTemplate="body" let-data>
+            <tr class="card-body table-border">
+                <td>{{data.invoicehGenId}}</td>
+                <td>{{data.amount.toFixed(2)}}</td>
+                <td>{{data.balance.toFixed(2)}}</td>
+                <td>
+                    <input type="number" pInputText [ngModelOptions]="{standalone: true}" [(ngModel)]="data.payment"
+                        (ngModelChange)="payAmtChange(data)">
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+
+</div>

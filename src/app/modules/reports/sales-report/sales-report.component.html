@@ -1,0 +1,247 @@
+<!-- <section class="content-header" *ngIf="!isLoading">
+    <h3>
+        {{'SALES_REPORT.BREAD_CRUMB_TITLE'| translate }}
+        <small>{{'COMMON.BREAD_CRUMB_SUB_TITLE'| translate }}</small>
+    </h3>
+    <p-breadcrumb [model]="items" [home]="home" [style]="{ background: 'none', border: 'none' }"></p-breadcrumb>
+</section> -->
+
+<!-- <section class="container-fluid page-scroller" *ngIf="!isLoading">
+    <form [formGroup]="dataForm">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="content-card-custom">
+
+                    <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                        <div class="column">
+                            <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                                {{'SALES_REPORT.TITLE'| translate }}</p>
+                            <p class="toolbar__para para-style" [ngStyle]="{'color': theme.toolBarSubHeaderColor}">
+                                {{'SALES_REPORT.SUB_TITLE'| translate}}</p>
+                        </div>
+
+                        <span class="toolbar-spacer"></span>
+
+                        <div class="tool-bar-btn-group">
+
+                            <button class="toolbar__icon" [disabled]="!dataForm.valid"
+                                matTooltip="{{'COMMON.SAVE_TOOLTIP'| translate}}" (click)="getData()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">sync</mat-icon>
+                            </button>
+
+
+                            <button class="toolbar__icon right_corner"
+                                matTooltip="{{'COMMON.CLEAR_TOOLTIP'| translate}}" (click)="clearData()"
+                                [ngStyle]="{'background-color': theme.toolBarIconBtnBackgroundColor}">
+                                <mat-icon [ngStyle]="{'color': theme.toolBarIconColor}">add</mat-icon>
+                            </button>
+                        </div>
+
+                    </mat-toolbar>
+
+                    <div class="txt-wrapper">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <label class="label-config">{{'SALES_REPORT.FORM_TITLE_1'| translate }}</label>
+                                <input type="date" class="input-style input-config-1" placeholder="Start Date"
+                                    [(ngModel)]="startDate" pInputText formControlName="startDate">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="label-config">{{'SALES_REPORT.FORM_TITLE_2'| translate }}</label>
+                                <input type="date" class="input-style input-config-1" placeholder="End Date" pInputText
+                                    [(ngModel)]="endDate" formControlName="endDate">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="content-card">
+                    <mat-toolbar class="toolbar" [ngStyle]="{'background-color': theme.toolBarBackgroundColor}">
+                        <div class="column">
+                            <p class="toolbar__header" [ngStyle]="{'color': theme.toolBarHeaderColor}">
+                               Net Sale : {{netSale}}&nbsp; &nbsp;Net
+                                Profit : {{netProfit}}&nbsp;</p>
+                        </div>
+                        <span class="toolbar-spacer"></span>
+
+                        <span class="p-input-icon-right">
+                            <i class="pi pi-search"></i>
+                            <input type="text" class="input-style input-config-1 table-search-box"
+                                placeholder="{{'COMMON.SEARCH_TITLE'| translate }}" pInputText
+                                (keyup)="tableFilter($event)">
+                        </span>
+                    </mat-toolbar>
+
+                    <div class="table-wrapper">
+                        <div class="table">
+                            <mat-table #table [dataSource]="dataSource">
+
+                                <ng-container matColumnDef="product">
+                                    <mat-header-cell *matHeaderCellDef>{{'SALES_REPORT.TABLE_HEADER_1'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.product}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                
+
+                                <ng-container matColumnDef="saleQty">
+                                    <mat-header-cell *matHeaderCellDef>{{'SALES_REPORT.TABLE_HEADER_2'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.saleQty}}
+                                    </mat-cell>
+                                </ng-container>
+
+
+                                <ng-container matColumnDef="invoices">
+                                    <mat-header-cell *matHeaderCellDef>{{'SALES_REPORT.TABLE_HEADER_3'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.invoices}}
+                                    </mat-cell>
+                                </ng-container>
+
+
+                                <ng-container matColumnDef="retQty">
+                                    <mat-header-cell *matHeaderCellDef>{{'SALES_REPORT.TABLE_HEADER_4'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.retQty}}
+                                    </mat-cell>
+                                </ng-container>
+
+
+                                <ng-container matColumnDef="salesReturn">
+                                    <mat-header-cell *matHeaderCellDef>{{'SALES_REPORT.TABLE_HEADER_5'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.salesReturn}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="netSale">
+                                    <mat-header-cell *matHeaderCellDef>{{'SALES_REPORT.TABLE_HEADER_6'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.netSale}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="profit">
+                                    <mat-header-cell *matHeaderCellDef>{{'SALES_REPORT.TABLE_HEADER_7'|
+                                        translate}}</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        {{element.profit}}&nbsp;({{element.profitPre}}%)
+                                    </mat-cell>
+                                </ng-container>
+
+                                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                            </mat-table>
+
+                            <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5,10, 15, 20]"
+                                showFirstLastButtons>
+                            </mat-paginator>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</section> -->
+
+<app-loader *ngIf="isLoading"></app-loader>
+<h2 class="header">Sales Report</h2>
+<p class="breadcrumbs">report / sales report</p>
+<p-toast></p-toast>
+
+<div class="insert-form-card" *ngIf="!isLoading">
+    <!-- FORM HEADER -->
+    <div class="card-header">
+        <h2 class="header">Category</h2>
+        <div class="icon-wapper">
+            <button class="icon-button" pTooltip="Get Data" tooltipPosition="bottom" (click)="getData()">
+                <i class="fal fa-inbox-in"></i>
+            </button>
+            <button class="icon-button" pTooltip="Clear" tooltipPosition="bottom" (click)="clearData()">
+                <i class="fal fa-eraser"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- FORM BODY -->
+    <form class="card-body" [formGroup]="dataForm">
+        <div class="input-wapper">
+            <div class="wapper">
+                <label for="branch">Start Date</label>
+                <p-calendar [(ngModel)]="startDate" formControlName="startDate" [showIcon]="true"></p-calendar>
+            </div>
+
+            <div class="wapper">
+                <label for="branch">End Date</label>
+                <p-calendar [(ngModel)]="endDate" formControlName="endDate" [showIcon]="true"></p-calendar>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="view-table-card" *ngIf="!isLoading">
+    <p-table 
+        #dt1 
+        [value]="allData"
+        [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['product' ,'saleQty' ,'invoices' ,'retQty' ,'salesReturn' ,'netSale' ,'profit']">
+        <!-- TABLE FILTERS -->
+        <ng-template pTemplate="caption">
+            <div class="flex" class="card-filter">
+                <h4 class="toolbar__header">
+                    Net Sale : {{netSale}}&nbsp; &nbsp;Net
+                     Profit : {{netProfit}}&nbsp;
+                </h4>
+                <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="applyFilterGlobal($event, 'contains')" placeholder="Filter Data" class="filter"/>
+                </span>
+            </div>
+        </ng-template>
+        <!-- TABLE HEADER -->
+        <ng-template pTemplate="header">
+            <tr class="card-header">
+                <th class="left-th">Product</th>
+                <th>Sold Quantity</th>
+                <th>Sale Amount</th>
+                <th>Return Quantity</th>
+                <th>Return Amount</th>
+                <th>Net Sale</th>
+                <th class="right-th">Net Profit</th>
+            </tr>
+        </ng-template>
+        <!-- TABLE BODY -->
+        <ng-template pTemplate="body" let-data>
+            <tr class="card-body table-border">
+                <td>{{data.product}}</td>
+                <td>{{data.saleQty}}</td>
+                <td>{{data.invoices}}</td>
+                <td>{{data.retQty}}</td>
+                <td>{{data.salesReturn}}</td>
+                <td>{{data.netSale}}</td>
+                <td>{{data.profit}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
